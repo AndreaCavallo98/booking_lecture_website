@@ -1,0 +1,56 @@
+[
+    {   
+        "id": 1,
+        "no": "#IN0001",
+        "img": "product1.jpg",
+        "name": "Abilify",
+        "rate": "$100.00",
+        "date": "9 Sep 2019",
+        "status": "Paid"
+    },
+    {
+        "id": 2,
+        "no": "#IN0002",
+        "img": "product2.jpg",
+        "name": "Actamin",
+        "rate": "$200.00",
+        "date": "29 Oct 2019",
+        "status": "Paid"
+    },
+    {
+        "id": 3,
+        "no": "#IN0003",
+        "img": "product3.jpg",
+        "name": "Actamin",
+        "rate": "$250.00",
+        "date": "25 Sep 2019",
+        "status": "Pending"
+    },
+    {
+        "id": 4,
+        "no": "#IN0004",
+        "img": "product4.jpg",
+        "name": "Abilify",
+        "rate": "$150.00",
+        "date": "9 Oct 2019",
+        "status": "Unpaid"
+    },
+    {
+        "id": 5,
+        "no": "#IN0005",
+        "img": "product5.jpg",
+        "name": "Actamin",
+        "rate": "$350.00",
+        "date": "19 Nov 2019",
+        "status": "Paid"
+    },
+    {
+        "id": 6,
+        "no": "#IN0006",
+        "img": "product6.jpg",
+        "name": "Actamin",
+        "rate": "$300.00",
+        "date": "12 Oct 2019",
+        "status": "Paid"
+    }
+]

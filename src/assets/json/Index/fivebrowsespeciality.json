@@ -1,0 +1,74 @@
+[
+    {   
+        "id": 1,
+        "img": "browse-01.jpg",
+        "img1": "clinic-02.png",
+        "name": "UROLOGY"
+    },
+    {
+        "id": 2,
+        "img": "browse-01.jpg",
+        "img1": "clinic-02.png",
+        "name": "UROLOGY"
+    },
+    {
+        "id": 3,
+        "img": "browse-02.jpg",
+        "img1": "clinic-11.png",
+        "name": "Orthopedic"
+    },
+    {
+        "id": 4,
+        "img": "browse-02.jpg",
+        "img1": "clinic-11.png",
+        "name": "Orthopedic"
+    },
+    {
+        "id": 5,
+        "img": "browse-03.jpg",
+        "img1": "clinic-03.png",
+        "name": "Orthopedic"
+    },
+    {
+        "id": 6,
+        "img": "browse-02.jpg",
+        "img1": "clinic-03.png",
+        "name": "Orthopedic"
+    },
+    {
+        "id": 7,
+        "img": "browse-04.jpg",
+        "img1": "clinic-12.png",
+        "name": "Dentist"
+    },
+    {
+        "id": 8,
+        "img": "browse-04.jpg",
+        "img1": "clinic-12.png",
+        "name": "Dentist"
+    },
+    {
+        "id": 9,
+        "img": "browse-05.jpg",
+        "img1": "clinic-13.png",
+        "name": "Neurology"
+    },
+    {
+        "id": 10,
+        "img": "browse-05.jpg",
+        "img1": "clinic-13.png",
+        "name": "Neurology"
+    },
+    {
+        "id": 11,
+        "img": "browse-01.jpg",
+        "img1": "clinic-03.png",
+        "name": "Cardiologist"
+    },
+    {
+        "id": 12,
+        "img": "browse-01.jpg",
+        "img1": "clinic-03.png",
+        "name": "Cardiologist"
+    }
+]

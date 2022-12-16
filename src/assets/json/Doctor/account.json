@@ -1,0 +1,62 @@
+[
+    {   
+        "id": 1,
+        "date": "11 Nov 2019",
+        "time": "10.00 AM",
+        "img": "patient.jpg",
+        "name": "Richard Wilson",
+        "nameno": "#PT0016",
+        "rate": "$150",
+        "status": "Paid"
+    },
+    {
+        "id": 2,
+        "date": "3 Nov 2019",
+        "time": "11.00 AM",
+        "img": "patient1.jpg",
+        "name": "Charlene Reed",
+        "nameno": "#PT0001",
+        "rate": "$200",
+        "status": "Paid"
+    },
+    {
+        "id": 3,
+        "date": "1 Nov 2019",
+        "time": "1.00 PM",
+        "img": "patient2.jpg",
+        "name": "Travis Trimble",
+        "nameno": "#PT0002",
+        "rate": "$75",
+        "status": "Paid"
+    },
+    {
+        "id": 4,
+        "date": "30 Oct 2019",
+        "time": "9.00 AM",
+        "img": "patient3.jpg",
+        "name": "Carl Kelly",
+        "nameno": "#PT0003",
+        "rate": "$100",
+        "status": "Pending"
+    },
+    {
+        "id": 5,
+        "date": "28 Oct 2019",
+        "time": "6.00 PM",
+        "img": "patient4.jpg",
+        "name": "Michelle Fairfax",
+        "nameno": "#PT0004",
+        "rate": "$350",
+        "status": "Paid"
+    },
+    {
+        "id": 6,
+        "date": "27 Oct 2019",
+        "time": "8.00 AM",
+        "img": "patient5.jpg",
+        "name": "Gina Moore",
+        "nameno": "#PT0005",
+        "rate": "$250",
+        "status": "Refunded"
+    }
+]

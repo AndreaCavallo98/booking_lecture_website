@@ -1,0 +1,56 @@
+[
+    {   
+        "id": 1,
+        "no": "1",
+        "planname": "Monthly Plan",
+        "type": "Month",
+        "amount": "$150",
+        "startdate": "11 Nov 2019",
+        "enddate": "11 Dec 2019"
+    },
+    {
+        "id": 2,
+        "no": "2",
+        "planname": "Yearly plan",
+        "type": "Year",
+        "amount": "$950",
+        "startdate": "11 Nov 2019",
+        "enddate": "10 Nov 2020"
+    },
+    {
+        "id": 3,
+        "no": "3",
+        "planname": "Whole Body Check",
+        "type": "Month",
+        "amount": "$100",
+        "startdate": "11 Nov 2019",
+        "enddate": "11 Dec 2019"
+    },
+    {
+        "id": 4,
+		"no": "4",
+        "planname": "Child Health Check",
+        "type": "Month",
+        "amount": "$100",
+        "startdate": "11 Nov 2019",
+        "enddate": "11 Dec 2019"
+    },
+    {
+        "id": 5,
+        "no": "5",
+        "planname": "Senior citizen Health Check",
+        "type": "Month",
+        "amount": "$105",
+        "startdate": "11 Nov 2019",
+        "enddate": "11 Dec 2019"
+    },
+    {
+        "id": 6,
+        "no": "6",
+        "planname": "Personalized Health Check",
+        "type": "Month",
+        "amount": "$105",
+        "startdate": "11 Nov 2019",
+        "enddate": "11 Dec 2019"
+    }
+]

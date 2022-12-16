@@ -1,0 +1,68 @@
+[
+    {   
+        "id": 1,
+        "no": "1",
+        "invoiceno": "OD1236547890",
+        "pharmacyname": "Medlife Medical",
+        "quantity": "2",
+        "amount": "$150",
+        "payment": "Stripe",
+        "status": "Order Placed",
+        "date": "10.00 AM"
+    },
+    {
+        "id": 2,
+        "no": "2",
+        "invoiceno": "OD1236547891",
+        "pharmacyname": "Medlife Medical",
+        "quantity": "4",
+        "amount": "$200",
+        "payment": "Stripe",
+        "status": "Order Placed",
+        "date": "11.00 AM"
+    },
+    {
+        "id": 3,
+        "no": "3",
+        "invoiceno": "OD1236547892",
+        "pharmacyname": "Medlife Medical",
+        "quantity": "1",
+        "amount": "$75",
+        "payment": "Stripe",
+        "status": "Order Placed",
+        "date": "1.00 PM"
+    },
+    {
+        "id": 4,
+        "no": "4",
+        "invoiceno": "OD1236547893",
+        "pharmacyname": "PharmaMed Medical",
+        "quantity": "2",
+        "amount": "$100",
+        "payment": "Paystack",
+        "status": "Shipped",
+        "date": "9.00 AM"
+    },
+    {
+        "id": 5,
+        "no": "5",
+        "invoiceno": "OD1236547894",
+        "pharmacyname": "PharmaMed Medical",
+        "quantity": "5",
+        "amount": "$350",
+        "payment": "Stripe",
+        "status": "Shipped",
+        "date": "6.00 PM"
+    },
+    {
+        "id": 6,
+        "no": "6",
+        "invoiceno": "OD1236547895",
+        "pharmacyname": "The Pill Club Medical",
+        "quantity": "1",
+        "amount": "$250",
+        "payment": "Paypal",
+        "status": "Order Placed",
+        "date": "8.00 AM"
+    }
+]

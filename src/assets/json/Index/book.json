@@ -1,0 +1,82 @@
+[
+    {   
+        "id": 1,
+        "img": "doctor-01.jpg",
+        "name": "Ruby Perrin",
+        "name1": "MDS - Periodontology and Oral Implantology, BDS",
+        "rating": "(17)",
+        "place": "Florida, USA",
+        "date": "Available on Fri, 22 Mar", 
+        "money": "$300 - $1000"
+    },
+    {
+        "id": 2,
+        "img": "doctor-02.jpg",
+        "name": "Darren Elder",
+        "name1": "BDS, MDS - Oral & Maxillofacial Surgery",
+        "rating": "(35)",
+        "place": "Newyork, USA",
+        "date": "Available on Fri, 22 Mar", 
+        "money": "$50 - $300"
+    },
+    {
+        "id": 3,
+        "img": "doctor-03.jpg",
+        "name": "Deborah Angel",
+        "name1": "MBBS, MD - General Medicine, DNB - Cardiology",
+        "rating": "(27)",
+        "place": "Georgia, USA",
+        "date": "Available on Fri, 22 Mar", 
+        "money": "$100 - $400"
+    },
+    {
+        "id": 4,
+        "img": "doctor-04.jpg",
+        "name": "Sofia Brient",
+        "name1": "MBBS, MS - General Surgery, MCh - Urology",
+        "rating": "(4)",
+        "place": "Louisiana, USA",
+        "date": "Available on Fri, 22 Mar", 
+        "money": "$150 - $250"
+    },
+    {
+        "id": 5,
+        "img": "doctor-05.jpg",
+        "name": "Marvin Campbell",
+        "name1": "MBBS, MD - Ophthalmology, DNB - Ophthalmology",
+        "rating": "(66)",
+        "place": "Michigan, USA",
+        "date": "Available on Fri, 22 Mar", 
+        "money": "$50 - $700"
+    },
+    {
+        "id": 6,
+        "img": "doctor-06.jpg",
+        "name": "Katharine Berthold",
+        "name1": "MS - Orthopaedics, MBBS, M.Ch - Orthopaedics",
+        "rating": "(52)",
+        "place": "Texas, USA",
+        "date": "Available on Fri, 22 Mar", 
+        "money": "$100 - $500"
+    },
+    {
+        "id": 7,
+        "img": "doctor-07.jpg",
+        "name": "Linda Tobin",
+        "name1": "MBBS, MD - General Medicine, DM - Neurology",
+        "rating": "(43)",
+        "place": "Kansas, USA",
+        "date": "Available on Fri, 22 Mar", 
+        "money": "$100 - $1000"
+    },
+    {
+        "id": 8,
+        "img": "doctor-08.jpg",
+        "name": "Paul Richard",
+        "name1": "MBBS, MD - Dermatology , Venereology & Lepros",
+        "rating": "(49)",
+        "place": "California, USA",
+        "date": "Available on Fri, 22 Mar", 
+        "money": "$100 - $400"
+    }
+]

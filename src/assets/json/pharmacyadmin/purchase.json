@@ -1,0 +1,68 @@
+[
+    {   
+        "id": 1,
+        "date": "13-5-2020",
+        "img": "product1.jpg",
+        "name": "Abilify",
+        "name1": "Aripiprazole",
+        "rate": "$220",
+        "amt": "60",
+        "name2": "Bradley",
+        "date1": "13-06-20"
+    },
+    {
+        "id": 2,
+        "date": "12-5-2020",
+        "img": "product2.jpg",
+        "name": "Actamin",
+        "name1": "Phytopathology‎",
+        "rate": "$30",
+        "amt": "20",
+        "name2": "Douglas",
+        "date1": "13-06-20"
+    },
+    {
+        "id": 3,
+        "date": "11-5-2020",
+        "img": "product3.jpg",
+        "name": "Adderall",
+        "name1": "Phytopathology‎",
+        "rate": "$58",
+        "amt": "33",
+        "name2": "Douglas",
+        "date1": "20-06-20"
+    },
+    {
+        "id": 4,
+        "date": "10-5-2020",
+        "img": "product4.jpg",
+        "name": "Abilify",
+        "name1": "Aripiprazole",
+        "rate": "$336",
+        "amt": "50",
+        "name2": "Bradley",
+        "date1": "13-06-20"
+    },
+    {
+        "id": 5,
+        "date": "9-5-2020",
+        "img": "product6.jpg",
+        "name": "Actamin",
+        "name1": "Phytopathology‎",
+        "rate": "$10",
+        "amt": "605",
+        "name2": "Douglas",
+        "date1": "13-06-20"
+    },
+    {
+        "id": 6,
+        "date": "8-5-2020",
+        "img": "product3.jpg",
+        "name": "Adderall",
+        "name1": "Phytopathology‎",
+        "rate": "$15",
+        "amt": "160",
+        "name2": "Douglas",
+        "date1": "20-06-20"
+    }
+]

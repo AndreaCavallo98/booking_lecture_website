@@ -1,0 +1,47 @@
+[
+    {   
+        "id": 1,
+        "img": "book-doc-05.jpg",
+        "rate": "$20 - $50",
+        "name": "Dr. Marvin Paul",
+        "name1": "PSICOLOGIST",
+        "rate1": "3.5",
+        "button": "Book Now"
+    },
+    {
+        "id": 2,
+        "img": "book-doc-04.jpg",
+        "rate": "$20 - $50",
+        "name": "Dr. Linda Tobin",
+        "name1": "PSICOLOGIST",
+        "rate1": "3.5",
+        "button": "Book Now"
+    },
+    {
+        "id": 3,
+        "img": "book-doc-03.jpg",
+        "rate": "$20 - $50",
+        "name": "Dr. Paul Richard",
+        "name1": "PSICOLOGIST",
+        "rate1": "3.5",
+        "button": "Book Now"
+    },
+    {
+        "id": 4,
+        "img": "book-doc-01.jpg",
+        "rate": "$20 - $50",
+        "name": "Dr. Ruby Perrin",
+        "name1": "PSICOLOGIST",
+        "rate1": "3.5",
+        "button": "Book Now"
+    },
+    {
+        "id": 5,
+        "img": "book-doc-02.jpg",
+        "rate": "$20 - $50",
+        "name": "Dr. Darren Elder",
+        "name1": "PSICOLOGIST",
+        "rate1": "3.5",
+        "button": "Book Now"
+    }
+]

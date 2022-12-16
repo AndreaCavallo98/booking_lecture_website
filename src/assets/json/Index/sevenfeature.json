@@ -1,0 +1,32 @@
+[
+    {   
+        "id": 1,
+        "img": "clinic-6.jpg",
+        "name": "Operation"
+    },
+    {
+        "id": 2,
+        "img": "clinic-7.jpg",
+        "name": "Medical"
+    },
+    {
+        "id": 3,
+        "img": "clinic-8.jpg",
+        "name": "Patient Ward"
+    },
+    {
+        "id": 4,
+        "img": "clinic-9.jpg",
+        "name": "TEST ROOM"
+    },
+    {
+        "id": 5,
+        "img": "clinic-10.jpg",
+        "name": "ICU"
+    },
+    {   
+        "id": 6,
+        "img": "clinic-6.jpg",
+        "name": "Operation"
+    }
+]

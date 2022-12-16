@@ -1,0 +1,20 @@
+[
+    {   
+        "id": 1,
+        "img": "set-cat-01.png",
+        "name": "Visit a Doctor",
+        "name1": "We hire the best specialists to deliver top-notch diagnostic services for you."
+    },
+    {
+        "id": 2,
+        "img": "set-cat-02.png",
+        "name": "Find a Pharmacy",
+        "name1": "We provide the a wide range of medical services, so every person could have the opportunity."
+    },
+    {
+        "id": 3,
+        "img": "set-cat-03.png",
+        "name": "Find a Lab",
+        "name1": "We use the first-class medical equipment for timely diagnostics of various diseases."
+    }
+]

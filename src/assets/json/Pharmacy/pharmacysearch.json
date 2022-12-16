@@ -1,0 +1,35 @@
+[
+    {   
+        "id": 1,
+        "img": "medical-img1.jpg",
+        "name": "Medlife Medical",
+        "rate": "4.0",
+        "rating": "(17)",
+        "phno": "320-795-8815",
+        "address": "96 Red Hawk Road Cyrus, MN 56323",
+        "description": "Chemists, Surgical Equipment Dealer",
+        "opening": "Opens at 08.00 AM"
+    },
+    {
+        "id": 2,
+        "img": "medical-img2.jpg",
+        "name": "PharmaMed Medical",
+        "rate": "4.0",
+        "rating": "(17)",
+        "phno": "913-631-2538",
+        "address": "3830 Poe Lane Kansas City, KS 66216",
+        "description": "Chemists, Surgical Equipment Dealer",
+        "opening": "Opens at 08.00 AM"
+    },
+    {
+        "id": 3,
+        "img": "medical-img3.jpg",
+        "name": "The Pill Club Medical",
+        "rate": "4.0",
+        "rating": "(17)",
+        "phno": "816-270-2336",
+        "address": "3849 Nutter Street Ferrelview, MO 64163",
+        "description": "Chemists, Surgical Equipment Dealer",
+        "opening": "Opens at 08.00 AM"
+    }
+]

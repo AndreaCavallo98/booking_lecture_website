@@ -1,0 +1,62 @@
+[
+    {   
+        "id": 1,
+        "img": "doctor-01.jpg",
+        "rate": "$20 - $50",
+        "rating": "3.5",
+        "name": "Dr. Ruby Perrin",
+        "title": "BDS, MDS - Oral & Maxillofacial Surgery",
+        "place": "Georgia, USA",
+        "place1": "450 Consultations",
+        "button": "View Profile",
+        "button1": "Book Now"
+    },
+    {
+        "id": 2,
+        "img": "doctor-04.jpg",
+        "rate": "$20 - $50",
+        "rating": "3.5",
+        "name": "Dr. Deborah Angel",
+        "title": "MBBS, MD - General Medicine, DNB",
+        "place": "Georgia, USA",
+        "place1": "450 Consultations",
+        "button": "View Profile",
+        "button1": "Book Now"
+    },
+    {
+        "id": 3,
+        "img": "doctor-03.jpg",
+        "rate": "$20 - $50",
+        "rating": "3.5",
+        "name": "Dr. Sofia Brient",
+        "title": "MBBS, MS - General Surgery, MCh",
+        "place": "Georgia, USA",
+        "place1": "450 Consultations",
+        "button": "View Profile",
+        "button1": "Book Now"
+    },
+    {
+        "id": 4,
+        "img": "doctor-02.jpg",
+        "rate": "$20 - $50",
+        "rating": "3.5",
+        "name": "Dr. Darren Elder",
+        "title": "BDS, MDS - Oral & Maxillofacial Surgery",
+        "place": "Georgia, USA",
+        "place1": "450 Consultations",
+        "button": "View Profile",
+        "button1": "Book Now"
+    },
+    {   
+        "id": 5,
+        "img": "doctor-01.jpg",
+        "rate": "$20 - $50",
+        "rating": "3.5",
+        "name": "Dr. Ruby Perrin",
+        "title": "BDS, MDS - Oral & Maxillofacial Surgery",
+        "place": "Georgia, USA",
+        "place1": "450 Consultations",
+        "button": "View Profile",
+        "button1": "Book Now"
+    }
+]

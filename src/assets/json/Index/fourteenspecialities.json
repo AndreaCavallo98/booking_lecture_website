@@ -1,0 +1,42 @@
+[
+    {   
+        "id": 1,
+        "img": "icon1.svg",
+        "name": "Urology"
+    },
+    {
+        "id": 2,
+        "img": "icon7.svg",
+        "name": "Orthopedic"
+    },
+    {
+        "id": 3,
+        "img": "icon4.svg",
+        "name": "Dentist"
+    },
+    {
+        "id": 4,
+        "img": "icon3.svg",
+        "name": "Cardiologist"
+    },
+    {
+        "id": 5,
+        "img": "icon8.svg",
+        "name": "MRI Scans"
+    },
+    {
+        "id": 6,
+        "img": "icon9.svg",
+        "name": "Neurology"
+    },
+    {
+        "id": 7,
+        "img": "icon10.svg",
+        "name": "Laboratory"
+    },
+    {
+        "id": 8,
+        "img": "icon11.svg",
+        "name": "Primary Checkup"
+    }
+]

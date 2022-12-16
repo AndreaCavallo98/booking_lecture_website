@@ -1,0 +1,26 @@
+[
+    {   
+        "id": 1,
+        "no": "01",
+        "name": "Visit a Doctor",
+        "description": "We hire the best specialists to deliver top-notch diagnostic services for you.",
+        "button": "Book Now",
+        "img": "visit-01.png"
+    },
+    {
+        "id": 2,
+        "no": "02",
+        "name": "Find a Pharmacy",
+        "description": "We provide the a wide range of medical services.",
+        "button": "Book Now",
+        "img": "visit-02.png"
+    },
+    {
+        "id": 3,
+        "no": "03",
+        "name": "Find a Lab",
+        "description": "We hire the best specialists to deliver top-notch diagnostic services for you.",
+        "button": "Book Now",
+        "img": "visit-03.png"
+    }
+]

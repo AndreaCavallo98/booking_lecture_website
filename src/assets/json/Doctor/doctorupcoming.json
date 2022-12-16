@@ -1,0 +1,68 @@
+[
+    {   
+        "id": 1,
+        "img": "patient.jpg",
+        "name": "Richard Wilson",
+        "nameno": "#PT0016",
+        "date": "11 Nov 2019",
+        "time": "10.00 AM",
+        "ward": "General",
+        "detail": "New Patient",
+        "price": "$150"
+    },
+    {
+        "id": 2,
+        "img": "patient1.jpg",
+        "name": "Charlene Reed",
+        "nameno": "#PT0001",
+        "date": "3 Nov 2019",
+        "time": "11.00 AM",
+        "ward": "General",
+        "detail": "Old Patient",
+        "price": "$200"
+    },
+    {
+        "id": 3,
+        "img": "patient2.jpg",
+        "name": "Travis Trimble",
+        "nameno": "#PT0002",
+        "date": "1 Nov 2019",
+        "time": "1.00 PM",
+        "ward": "General",
+        "detail": "New Patient",
+        "price": "$75"
+    },
+    {
+        "id": 4,
+        "img": "patient3.jpg",
+        "name": "Carl Kelly",
+        "nameno": "#PT0003",
+        "date": "30 Oct 2019",
+        "time": "9.00 AM",
+        "ward": "General",
+        "detail": "Old Patient",
+        "price": "$100"
+    },
+    {
+        "id": 5,
+        "img": "patient4.jpg",
+        "name": "Michelle Fairfax",
+        "nameno": "#PT0004",
+        "date": "28 Oct 2019",
+        "time": "6.00 PM",
+        "ward": "General",
+        "detail": "New Patient",
+        "price": "$350"
+    },
+    {
+        "id": 6,
+        "img": "patient5.jpg",
+        "name": "Gina Moore",
+        "nameno": "#PT0005",
+        "date": "27 Oct 2019",
+        "time": "8.00 AM",
+        "ward": "General",
+        "detail": "Old Patient",
+        "price": "$250"
+    }
+]

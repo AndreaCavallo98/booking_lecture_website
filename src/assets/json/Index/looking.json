@@ -1,0 +1,20 @@
+[
+    {   
+        "id": 1,
+        "img": "medical-img1.jpg",
+        "name": "Visit a Doctor",
+        "button": "Book Now"
+    },
+    {
+        "id": 2,
+        "img": "img-pharmacy1.jpg",
+        "name": "Find a Pharmacy",
+        "button": "Find Now"
+    },
+    {
+        "id": 3,
+        "img": "lab-image.jpg",
+        "name": "Find a Lab",
+        "button": "Coming Soon"
+    }
+]

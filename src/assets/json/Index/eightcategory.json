@@ -1,0 +1,20 @@
+[
+    {   
+        "id": 1,
+        "name": "Visit a Doctor",
+        "name1": "250 +  Doctors",
+        "button": "Book Now"
+    },
+    {
+        "id": 2,
+        "name": "Find a Pharmacy",
+        "name1": "2560 +  Pharmacy",
+        "button": "Book Now"
+    },
+    {
+        "id": 3,
+        "name": "Find a Lab",
+        "name1": "250 +  Testing Labs",
+        "button": "Book Now"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {   
+        "id": 1,
+        "img": "clinic-bg.png",
+        "img1": "clinic-hover-01.png",
+        "name": "Orthopedic",
+        "no": "124",
+        "name1": "Doctors",
+        "no1": "24",
+        "name2": "Clinics"
+    },
+    {
+        "id": 2,
+        "img": "clinic-bg.png",
+        "img1": "clinic-hover-06.png",
+        "name": "Laboratry",
+        "no": "124",
+        "name1": "Doctors",
+        "no1": "24",
+        "name2": "Clinics"
+    },
+    {
+        "id": 3,
+        "img": "clinic-bg.png",
+        "img1": "clinic-hover-04.png",
+        "name": "Neurology",
+        "no": "124",
+        "name1": "Doctors",
+        "no1": "24",
+        "name2": "Clinics"
+    },
+    {
+        "id": 4,
+        "img": "clinic-bg.png",
+        "img1": "cardiology.png",
+        "name": "Cardiology",
+        "no": "124",
+        "name1": "Doctors",
+        "no1": "24",
+        "name2": "Clinics"
+    }
+]

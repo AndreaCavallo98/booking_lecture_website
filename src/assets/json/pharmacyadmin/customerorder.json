@@ -1,0 +1,52 @@
+[
+    {   
+        "id": 1,
+        "date": "13-5-2020",
+        "img": "product1.jpg",
+        "name": "Abilify",
+        "user": "Aripiprazole",
+        "rate": "$220",
+        "amount": "60",
+        "detail": "Bradley"
+    },
+    {
+        "id": 2,
+        "date": "12-5-2020",
+        "img": "product2.jpg",
+        "name": "Actamin",
+        "user": "Phytopathology",
+        "rate": "$30",
+        "amount": "20",
+        "detail": "Douglas"
+    },
+    {
+        "id": 3,
+        "date": "10-5-2020",
+        "img": "product3.jpg",
+        "name": "Adderall",
+        "user": "Aripiprazole",
+        "rate": "$336",
+        "amount": "50",
+        "detail": "Bradley"
+    },
+    {
+        "id": 4,
+        "date": "9-5-2020",
+        "img": "product4.jpg",
+        "name": "Adderall",
+        "user": "Phytopathology",
+        "rate": "$10",
+        "amount": "605",
+        "detail": "Douglas"
+    },
+    {
+        "id": 5,
+        "date": "8-5-2020",
+        "img": "product5.jpg",
+        "name": "Actamin",
+        "user": "Aripiprazole",
+        "rate": "$15",
+        "amount": "160",
+        "detail": "Douglas"
+    }
+]

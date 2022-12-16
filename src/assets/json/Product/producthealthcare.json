@@ -1,0 +1,66 @@
+[
+    {   
+        "id": 1,
+        "img": "product8.jpg",
+        "name": "Antatriene Drospiletra",
+        "rate": "(35)",
+        "rate1": "$10.00",
+        "rate2": "$20.00"
+    },
+    {
+        "id": 2,
+        "img": "product9.jpg",
+        "name": "Zolpimid Tramatrigine",
+        "rate": "(35)",
+        "rate1": "$22.00",
+        "rate2": "$20.00"
+    },
+    {
+        "id": 3,
+        "img": "product10.jpg",
+        "name": "Lysofranil Dorzostin",
+        "rate": "(15)",
+        "rate1": "$10.00",
+        "rate2": "$12.00"
+    },
+    {
+        "id": 4,
+        "img": "product11.jpg",
+        "name": "Ergorinex Caffeigestin",
+        "rate": "(15)",
+        "rate1": "$15.00",
+        "rate2": "$12.00"
+    },
+    {
+        "id": 5,
+        "img": "product12.jpg",
+        "name": "Acetrace Amionel",
+        "rate": "(15)",
+        "rate1": "$7.00",
+        "rate2": "$12.00"
+    },
+    {
+        "id": 6,
+        "img": "product13.jpg",
+        "name": "Rapalac Neuronium",
+        "rate": "(15)",
+        "rate1": "$16.00",
+        "rate2": "$12.00"
+    },
+    {
+        "id": 7,
+        "img": "product14.jpg",
+        "name": "Cordacriptine Mardipine",
+        "rate": "(15)",
+        "rate1": "$9.00",
+        "rate2": "$12.00"
+    },
+    {
+        "id": 8,
+        "img": "product15.jpg",
+        "name": "Neubide Aborase",
+        "rate": "(15)",
+        "rate1": "$30.00",
+        "rate2": "$12.00"
+    }
+]

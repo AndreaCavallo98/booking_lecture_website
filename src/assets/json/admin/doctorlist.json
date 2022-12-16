@@ -1,0 +1,90 @@
+[
+    {   
+        "id": 1,
+        "idno": "#4546",
+        "img": "avatar-05.jpg",
+        "name": "Dr. Rayan",
+        "specialist": "Gyanoclogist",
+        "date": "26 November 2022",
+        "date1": "12/20/2022",
+        "amt": "545",
+        "rate": "$300.00"
+    },
+    {
+        "id": 2,
+        "idno": "#8774",
+        "img": "avatar-02.jpg",
+        "name": "Dr. Monroe",
+        "specialist": "Hair Specialities",
+        "date": "26 November 2022",
+        "date1": "12/20/2022",
+        "amt": "654",
+        "rate": "$300.00"
+    },
+    {
+        "id": 3,
+        "idno": "#4546",
+        "img": "avatar-07.jpg",
+        "name": "Dr. Lester",
+        "specialist": "Orthopaedics",
+        "date": "26 November 2022",
+        "date1": "12/20/2022",
+        "amt": "787",
+        "rate": "$300.00"
+    },
+    {
+        "id": 4,
+        "idno": "#4546",
+        "img": "avatar-07.jpg",
+        "name": "Dr. Clint",
+        "specialist": "Orthopaedics",
+        "date": "26 November 2022",
+        "date1": "12/20/2022",
+        "amt": "454",
+        "rate": "$300.00"
+    },
+    {
+        "id": 5,
+        "idno": "#3456",
+        "img": "avatar-12.jpg",
+        "name": "Dr. John",
+        "specialist": "Neurologist",
+        "date": "26 November 2022",
+        "date1": "12/20/2022",
+        "amt": "545",
+        "rate": "$300.00"
+    },
+    {
+        "id": 6,
+        "idno": "#4547",
+        "img": "avatar-06.jpg",
+        "name": "Dr. Linda",
+        "specialist": "Gyanoclogist",
+        "date": "26 November 2022",
+        "date1": "12/20/2022",
+        "amt": "545",
+        "rate": "$300.00"
+    },
+    {
+        "id": 7,
+        "idno": "#8775",
+        "img": "avatar-04.jpg",
+        "name": "Dr. Sofia Brient",
+        "specialist": "Hair Specialities",
+        "date": "26 November 2022",
+        "date1": "12/20/2022",
+        "amt": "654",
+        "rate": "$300.00"
+    },
+    {
+        "id": 8,
+        "idno": "#7364",
+        "img": "avatar-10.jpg",
+        "name": "Dr. Richard",
+        "specialist": "Cardiologist",
+        "date": "26 November 2022",
+        "date1": "12/20/2022",
+        "amt": "654",
+        "rate": "$300.00"
+    }
+]

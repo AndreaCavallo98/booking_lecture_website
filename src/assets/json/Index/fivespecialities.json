@@ -1,0 +1,98 @@
+[
+    {   
+        "id": 1,
+        "img": "clinic-01.png",
+        "img1": "clinic-hover-01.png",
+        "name": "Orthopedic",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 2,
+        "img": "clinic-02.png",
+        "img1": "clinic-hover-02.png",
+        "name": "Urology",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 3,
+        "img": "clinic-03.png",
+        "img1": "clinic-hover-03.png",
+        "name": "Cardiologist",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 4,
+        "img": "clinic-04.png",
+        "img1": "clinic-hover-04.png",
+        "name": "Neurology",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 5,
+        "img": "clinic-05.png",
+        "img1": "clinic-hover-05.png",
+        "name": "Dentist",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 6,
+        "img": "clinic-06.png",
+        "img1": "clinic-hover-06.png",
+        "name": "Laboratry",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 7,
+        "img": "clinic-07.png",
+        "img1": "clinic-hover-07.png",
+        "name": "MRI Scans",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 8,
+        "img": "clinic-08.png",
+        "img1": "clinic-hover-08.png",
+        "name": "Primary Checkup",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 9,
+        "img": "clinic-09.png",
+        "img1": "clinic-hover-09.png",
+        "name": "Testing",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 10,
+        "img": "clinic-10.png",
+        "img1": "clinic-hover-10.png",
+        "name": "Pediatrics",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 11,
+        "img": "clinic-01.png",
+        "img1": "clinic-hover-01.png",
+        "name": "Orthopedic",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 12,
+        "img": "clinic-02.png",
+        "img1": "clinic-hover-02.png",
+        "name": "Urology",
+        "no": "124",
+        "name1": "Doctors"
+    }
+]

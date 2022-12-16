@@ -1,0 +1,38 @@
+[
+    {   
+        "id": 1,
+        "img": "patient16.jpg",
+        "name": "Christopher",
+        "relationship": "Son",
+        "gender": "Male",
+        "phno": "303-297-6170",
+        "blood": "AB+"
+    },
+    {
+        "id": 2,
+        "img": "patient17.jpg",
+        "name": "Tressie",
+        "relationship": "Daughter",
+        "gender": "Female",
+        "phno": "360-822-9097",
+        "blood": "B+"
+    },
+    {
+        "id": 3,
+        "img": "patient18.jpg",
+        "name": "Champagne",
+        "relationship": "Father",
+        "gender": "Male",
+        "phno": "720-841-8299",
+        "blood": "B+"
+    },
+    {
+        "id": 4,
+        "img": "patient19.jpg",
+        "name": "Vena",
+        "relationship": "Mother",
+        "gender": "Male",
+        "phno": "949-583-4370",
+        "blood": "A+"
+    }
+]

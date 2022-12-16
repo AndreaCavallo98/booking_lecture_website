@@ -1,0 +1,86 @@
+[
+    {   
+        "id": 1,
+        "img": "bro-01.png",
+        "name": "Urology",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 2,
+        "img": "bro-02.png",
+        "name": "Neurology",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 3,
+        "img": "bro-03.png",
+        "name": "Orthopedic",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 4,
+        "img": "bro-04.png",
+        "name": "Cardiologist",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 5,
+        "img": "bro-01.png",
+        "name": "Dentist",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 6,
+        "img": "bro-05.png",
+        "name": "Heart surgery",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 7,
+        "img": "bro-01.png",
+        "name": "Urology",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 8,
+        "img": "bro-02.png",
+        "name": "Neurology",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 9,
+        "img": "bro-03.png",
+        "name": "Orthopedic",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 10,
+        "img": "bro-04.png",
+        "name": "Cardiologist",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 11,
+        "img": "bro-01.png",
+        "name": "Dentist",
+        "no": "124",
+        "name1": "Doctors"
+    },
+    {
+        "id": 12,
+        "img": "bro-05.png",
+        "name": "Heart surgery",
+        "no": "124",
+        "name1": "Doctors"
+    }
+]

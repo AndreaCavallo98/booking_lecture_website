@@ -1,0 +1,107 @@
+[
+    {   
+        "id": 1,
+        "img": "product.jpg",
+        "name": "Benzaxapine Croplex",
+        "rate": "$19.00",
+        "price": "$45.00"
+    },
+    {
+        "id": 2,
+        "img": "product13.jpg",
+        "name": "Rapalac Neuronium",
+        "rate": "$16.00",
+        "price": "$22"
+    },
+    {
+        "id": 3,
+        "img": "product1.jpg",
+        "name": "Ombinazol Bonibamol",
+        "rate": "$22.00",
+        "price": "$10"
+    },
+    {
+        "id": 4,
+        "img": "product2.jpg",
+        "name": "Dantotate Dantodazole",
+        "rate": "$10.00",
+        "price": "$12.00"
+    },
+    {
+        "id": 5,
+        "img": "product12.jpg",
+        "name": "Acetrace Amionel",
+        "rate": "$7.00",
+        "price": "$12"
+    },
+    {
+        "id": 6,
+        "img": "product11.jpg",
+        "name": "Ergorinex Caffeigestin",
+        "rate": "$15.00",
+        "price": "$12"
+    },
+    {
+        "id": 7,
+        "img": "product3.jpg",
+        "name": "Alispirox Aerorenone",
+        "rate": "$26.00",
+        "price": "$12"
+    },
+    {
+        "id": 8,
+        "img": "product10.jpg",
+        "name": "Lysofranil Dorzostin",
+        "rate": "$10.00",
+        "price": "$12.00"
+    },
+    {
+        "id": 9,
+        "img": "product4.jpg",
+        "name": "Nitrolozin Zithrotropin",
+        "rate": "$12.00",
+        "price": "$12"
+    },
+    {
+        "id": 10,
+        "img": "product14.jpg",
+        "name": "Cordacriptine Mardipine",
+        "rate": "$9.00",
+        "price": "$12"
+    },
+    {
+        "id": 11,
+        "img": "product5.jpg",
+        "name": "Iconevist Ampyplex",
+        "rate": "$16.00",
+        "price": "$12"
+    },
+    {
+        "id": 12,
+        "img": "product6.jpg",
+        "name": "Alcafsteride Omebide",
+        "rate": "$7.00",
+        "price": "$12"
+    },
+    {
+        "id": 13,
+        "img": "product15.jpg",
+        "name": "Neubide Aborase",
+        "rate": "$30.00",
+        "price": "$12"
+    },
+    {
+        "id": 14,
+        "img": "product7.jpg",
+        "name": "ITONE eye drops 10ml",
+        "rate": "$50.00",
+        "price": "$12"
+    },
+    {
+        "id": 15,
+        "img": "product8.jpg",
+        "name": "Antatriene Drospiletra",
+        "rate": "$10.00",
+        "price": "$20.00"
+    }
+]

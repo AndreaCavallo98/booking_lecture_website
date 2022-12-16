@@ -1,0 +1,35 @@
+[
+    {   
+        "id": 1,
+        "no": "1",
+        "img": "product1.jpg",
+        "name": "Abilify",
+        "user": "Discarsa",
+        "phno": "+51 1542565",
+        "mailid": "Discarsa@gmail.com",
+        "user1": "Paseo Los Robles",
+        "user2": "Discarsa Nicaragua"
+    },
+    {
+        "id": 2,
+        "no": "2",
+        "img": "product2.jpg",
+        "name": "Actamin",
+        "user": "Proveedor",
+        "phno": "+51 23687541",
+        "mailid": "proveedor@gmail.com",
+        "user1": "Av circunvalación # 234",
+        "user2": "mi farmacia"
+    },
+    {
+        "id": 3,
+        "no": "3",
+        "img": "product3.jpg",
+        "name": "Adderall",
+        "user": "Discarsa",
+        "phno": "+51 96588552",
+        "mailid": "Discarsa@gmail.com",
+        "user1": "Paseo Los Robles",
+        "user2": "Discarsa Nicaragua"
+    }
+]
