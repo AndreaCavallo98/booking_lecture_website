@@ -16,7 +16,7 @@
               placeholder="Search by name or course..."
               class="form-control"
             />
-            <button @click.prevent="" class="btn btn-primary">
+            <button disabled @click.prevent="" class="btn btn-primary">
               <i class="fa fa-search"></i>
             </button>
           </div>
@@ -111,7 +111,7 @@ export default {
         this.filterMaxHourlyRate,
         this.filterSearchtext,
         this.filterSelectedCourse,
-        this.formatDate(this.startdate)
+        this.startdate == null ? "" : this.formatDate(this.startdate)
       );
     },
     changeFilterCourse() {
@@ -119,7 +119,7 @@ export default {
         this.filterMaxHourlyRate,
         this.filterSearchtext,
         this.filterSelectedCourse,
-        this.formatDate(this.startdate)
+        this.startdate == null ? "" : this.formatDate(this.startdate)
       );
     },
     changeFilterDate() {
@@ -135,7 +135,7 @@ export default {
         this.filterMaxHourlyRate,
         this.filterSearchtext,
         this.filterSelectedCourse,
-        this.formatDate(this.startdate)
+        this.startdate == null ? "" : this.formatDate(this.startdate)
       );
     },
     formatDate(date) {

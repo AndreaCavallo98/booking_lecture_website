@@ -27,7 +27,7 @@ import "./assets/style.css";
 //import "./assets/js/intlTelInput.js";
 //import "./assets/js/intlTelInput.min.js";
 //import "./assets/js/utils.js";
-//import "./assets/js/slick.js";
+import "./assets/js/slick.js";
 
 const app = createApp(App);
 

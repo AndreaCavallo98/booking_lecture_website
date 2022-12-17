@@ -72,11 +72,14 @@
                       </h4>
                       <p class="doc-speciality">{{ teacher.description }}</p>
                       <div class="rating mapgridrating">
-                        <i class="fas fa-star filled"></i>
-                        <i class="fas fa-star filled"></i>
-                        <i class="fas fa-star filled"></i>
-                        <i class="fas fa-star filled"></i>
-                        <i class="fas fa-star"></i>
+                        <i
+                          v-for="n in Math.round(teacher.reviews_average)"
+                          class="fas fa-star filled"
+                        ></i>
+                        <i
+                          v-for="n in 5 - Math.round(teacher.reviews_average)"
+                          class="fas fa-star"
+                        ></i>
                         <span class="d-inline-block average-rating"
                           >({{ teacher.num_reviews }})</span
                         >
@@ -100,7 +103,7 @@
                       <ul>
                         <li>
                           <i class="far fa-thumbs-up"></i>
-                          {{ teacher.reviews_average }} stars
+                          {{ teacher.num_lectures_given }} lectures given
                         </li>
                         <li>
                           <i class="far fa-comment"></i>
@@ -108,7 +111,7 @@
                         </li>
                         <li>
                           <i class="far fa-money-bill-alt"></i>
-                          {{ teacher.hourly_rate }} €/h
+                          {{ teacher.hourly_rate }} €/ hour
                         </li>
                       </ul>
                     </div>
