@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Homepage from "@/views/Homepage.vue";
 import Teachers from "@/views/Teachers.vue";
+import TeacherDetails from "@/views/TeacherDetails.vue";
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
     name: "teachers",
     path: "/teachers",
     component: Teachers,
+  },
+  {
+    name: "teacher",
+    path: "/teacher/:id",
+    component: TeacherDetails,
   },
   {
     name: "bookings",
@@ -30,6 +36,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  linkExactActiveClass: "active",
 });
 
 export default router;

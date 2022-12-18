@@ -17,6 +17,7 @@
           <form>
             <div class="form-group search-info">
               <input
+                v-model="searchBar"
                 type="text"
                 class="form-control"
                 placeholder="Search Courses, Teacher..."
@@ -27,7 +28,10 @@
                 >Ex : Math, English or Teacher name - surname etc</span
               >
             </div>
-            <router-link to="/search">
+            <router-link
+              :to="{ name: 'teachers', query: { search: searchBar } }"
+              tag="div"
+            >
               <button type="submit" class="btn btn-primary search-btn mt-0">
                 <i class="fas fa-search"></i> <span>Search</span>
               </button>
@@ -44,5 +48,10 @@
 <script>
 export default {
   name: "Banner",
+  data() {
+    return {
+      searchBar: "",
+    };
+  },
 };
 </script>

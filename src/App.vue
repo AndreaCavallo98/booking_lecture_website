@@ -25,7 +25,6 @@ export default {
 - Autenticazione
 - Finire homepage
 - Finire pagina teachers
-- Dettaglio teacher
 - Calendario prenotazione
 - Mie prenotazioni + recensione
 - Profilo
@@ -34,6 +33,7 @@ export default {
 [ADDITIONAL FUNCTIONS]
 - pwa
 - internalization
+- dark mode
 
 */
 </script>

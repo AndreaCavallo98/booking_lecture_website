@@ -8,7 +8,7 @@
             <nav aria-label="breadcrumb" class="page-breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <router-link to="/">Home</router-link>
+                  <router-link to="/">Homepage</router-link>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                   Teachers
@@ -56,7 +56,12 @@
                 <div class="doctor-widget">
                   <div class="doc-info-left">
                     <div class="doctor-img">
-                      <router-link to="/doctor-profile">
+                      <router-link
+                        :to="{
+                          name: 'teacher',
+                          params: { id: teacher.id },
+                        }"
+                      >
                         <img
                           src="@/assets/img/teachers/nofototeacher.jpeg"
                           class="img-fluid"
@@ -66,7 +71,12 @@
                     </div>
                     <div class="doc-info-cont">
                       <h4 class="doc-name">
-                        <router-link to="/doctor-profile">
+                        <router-link
+                          :to="{
+                            name: 'teacher',
+                            params: { id: teacher.id },
+                          }"
+                        >
                           {{ teacher.name }} {{ teacher.surname }}
                         </router-link>
                       </h4>
@@ -116,7 +126,12 @@
                       </ul>
                     </div>
                     <div class="clinic-booking">
-                      <router-link class="view-pro-btn" to="/doctor-profile"
+                      <router-link
+                        class="view-pro-btn"
+                        :to="{
+                          name: 'teacher',
+                          params: { id: teacher.id },
+                        }"
                         >View Profile</router-link
                       >
                       <router-link class="apt-btn" to="/booking"
@@ -185,6 +200,12 @@ export default {
         )
         .then((response) => {
           this.teachers = response.data;
+          if (this.$route.query.courseid != null) {
+            this.filterCourse = Number(this.$route.query.courseid);
+          }
+          if (this.$route.query.search != null) {
+            this.filterSearchText = this.$route.query.search;
+          }
         })
         .catch((error) => {
           console.log(error);

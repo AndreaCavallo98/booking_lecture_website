@@ -21,7 +21,9 @@
                   <!-- Slider -->
                   <div class="specialities-slider slider">
                     <!-- Slider Item -->
-                    <div
+                    <router-link
+                      :to="{ name: 'teachers', query: { courseid: course.id } }"
+                      tag="div"
                       class="speicality-item text-center"
                       v-for="course in courses"
                       :key="course.id"
@@ -41,7 +43,7 @@
                         ></i>
                       </div>
                       <p>{{ course.title }}</p>
-                    </div>
+                    </router-link>
                     <!-- /Slider Item -->
                   </div>
                   <!-- /Slider -->
@@ -77,11 +79,11 @@ export default {
     if ($(".specialities-slider").length > 0) {
       $(".specialities-slider").slick({
         dots: true,
-        autoplay: false,
+        autoplay: true,
         infinite: true,
         variableWidth: true,
-        prevArrow: false,
-        nextArrow: false,
+        draggable: false,
+        autoplaySpeed: 2000,
       });
     }
   },

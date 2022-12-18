@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="section-header aos" data-aos="fade-up">
-            <h2 style="color: #d68325">Learn from the best teacher!</h2>
+            <h2 style="color: #d68325">Learn from the best teachers!</h2>
             <p>Here we bring you the 5 best-reviewed teachers!</p>
           </div>
           <div class="about-content aos" data-aos="fade-up">
@@ -26,7 +26,12 @@
               :key="teacher.id"
             >
               <div class="doc-img">
-                <router-link to="/doctor-profile">
+                <router-link
+                  :to="{
+                    name: 'teacher',
+                    params: { id: teacher.id },
+                  }"
+                >
                   <img
                     class="img-fluid"
                     alt="User Image"
@@ -36,7 +41,11 @@
               </div>
               <div class="pro-content">
                 <h3 class="title">
-                  <router-link to="/doctor-profile"
+                  <router-link
+                    :to="{
+                      name: 'teacher',
+                      params: { id: teacher.id },
+                    }"
                     >{{ teacher.name }} {{ teacher.surname }}</router-link
                   >
                   <i class="fas fa-check-circle verified"></i>
@@ -88,7 +97,12 @@
                 </p>
                 <div class="row row-sm">
                   <div class="col-6">
-                    <router-link to="/doctor-profile" class="btn view-btn"
+                    <router-link
+                      :to="{
+                        name: 'teacher',
+                        params: { id: teacher.id },
+                      }"
+                      class="btn view-btn"
                       >View Profile</router-link
                     >
                   </div>
@@ -133,7 +147,7 @@ export default {
       $(".doctor-slider").slick({
         dots: false,
         autoplay: false,
-        infinite: true,
+        infinite: false,
         variableWidth: true,
       });
     }

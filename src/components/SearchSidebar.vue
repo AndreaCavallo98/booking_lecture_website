@@ -89,8 +89,12 @@ export default {
       currentDate: currentDateGet,
 
       // Filter field
-      filterSearchtext: "",
-      filterSelectedCourse: -1,
+      filterSearchtext:
+        this.$route.query.search == null ? "" : this.$route.query.search,
+      filterSelectedCourse:
+        this.$route.query.courseid == null
+          ? -1
+          : Number(this.$route.query.courseid),
       startdate: null,
       filterMaxHourlyRate: 22,
     };
