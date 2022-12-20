@@ -88,8 +88,13 @@
                     </li>
                   </ul>
                 </div>
-                <div class="clinic-booking">
-                  <router-link class="apt-btn" to="/booking"
+                <div v-if="userLoggedIn" class="clinic-booking">
+                  <router-link
+                    class="apt-btn"
+                    :to="{
+                      name: 'book',
+                      params: { id: teacher.id },
+                    }"
                     >Book Appointment</router-link
                   >
                 </div>
@@ -192,6 +197,8 @@
 
 <script>
 import axios from "axios";
+import { mapState } from "pinia";
+import useUserStore from "@/stores/user";
 
 export default {
   mounted() {},
@@ -209,7 +216,7 @@ export default {
       )
       .then((response) => {
         if (response.data == null) {
-          this.$router.push({ name: "homepage" });
+          this.$router.push({ path: "/" });
           return;
         }
         this.teacher = response.data;
@@ -229,6 +236,9 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+  },
+  computed: {
+    ...mapState(useUserStore, ["userLoggedIn"]),
   },
 };
 </script>

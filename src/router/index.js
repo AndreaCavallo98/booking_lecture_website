@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Homepage from "@/views/Homepage.vue";
 import Teachers from "@/views/Teachers.vue";
 import TeacherDetails from "@/views/TeacherDetails.vue";
+import BookLecture from "@/views/BookLecture.vue";
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     name: "teacher",
     path: "/teacher/:id",
     component: TeacherDetails,
+  },
+  {
+    name: "book",
+    path: "/book/:id",
+    component: BookLecture,
   },
   {
     name: "bookings",

@@ -40,13 +40,36 @@
           <li :class="currentPath == 'index' ? 'active' : 'notactive'">
             <router-link :to="{ name: 'teachers' }">Teachers</router-link>
           </li>
-          <li :class="currentPath == 'index' ? 'active' : 'notactive'">
-            <router-link :to="{ name: 'bookings' }">My Bookings</router-link>
+          <template v-if="userLoggedIn">
+            <li :class="currentPath == 'index' ? 'active' : 'notactive'">
+              <router-link :to="{ name: 'bookings' }">My Bookings</router-link>
+            </li>
+            <li :class="currentPath == 'index' ? 'active' : 'notactive'">
+              <router-link :to="{ name: 'profile' }">Profile</router-link>
+            </li>
+          </template>
+          <li v-if="userRole == 'admin'" class="has-submenu">
+            <a href="javascript:void(0);" target="_blank"
+              >Admin <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="submenu">
+              <li>
+                <router-link to="/admin/login" target="_blank"
+                  >Manage courses</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/pharmacyadmin/login" target="_blank"
+                  >Manage teachers</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/pharmacyadmin/login" target="_blank"
+                  >Manage bookings</router-link
+                >
+              </li>
+            </ul>
           </li>
-          <li :class="currentPath == 'index' ? 'active' : 'notactive'">
-            <router-link :to="{ name: 'profile' }">Profile</router-link>
-          </li>
-
           <!--<li class="has-submenu">
             <a href="javascript:void(0);" target="_blank"
               >Admin <i class="fas fa-chevron-down"></i
@@ -64,25 +87,20 @@
               </li>
             </ul>
           </li>-->
-          <li class="login-link">
-            <router-link to="/login">Login / Signup</router-link>
-          </li>
         </ul>
       </div>
       <ul class="nav header-navbar-rht">
-        <li class="nav-item contact-item">
-          <div class="header-contact-img">
-            <i class="far fa-hospital"></i>
-          </div>
-          <div class="header-contact-detail">
-            <p class="contact-header">Contact</p>
-            <p class="contact-info-header">+1 315 369 5943</p>
-          </div>
+        <li v-if="!userLoggedIn" class="nav-item">
+          <a
+            href="javascript:void(0);"
+            class="nav-link header-login btn-one-light"
+            data-bs-toggle="modal"
+            data-bs-target="#add_event"
+            >login / Signup</a
+          >
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link header-login btn-one-light" to="/login"
-            >login / Signup
-          </router-link>
+        <li @click.prevent="signOut" v-else class="nav-item">
+          <a class="nav-link header-login btn-one-light">Logout</a>
         </li>
       </ul>
     </nav>
@@ -91,11 +109,21 @@
 </template>
 
 <script>
+import { mapState, mapActions } from "pinia";
+import useUserStore from "@/stores/user";
+
 export default {
   name: "AppHeader",
   computed: {
+    ...mapState(useUserStore, ["userLoggedIn", "userRole"]),
     currentPath() {
       return this.$route.name;
+    },
+  },
+  methods: {
+    ...mapActions(useUserStore, ["logout"]),
+    signOut() {
+      this.logout();
     },
   },
 };

@@ -1,0 +1,16 @@
+[
+  {
+    "title": "primo",
+    "start": "2022-12-20",
+    "editable": false,
+    "backgroundColor": "yellow",
+    "available": true
+  },
+  {
+    "title": "secondo",
+    "start": "2022-12-21",
+    "backgroundColor": "red",
+    "editable": false,
+    "available": false
+  }
+]

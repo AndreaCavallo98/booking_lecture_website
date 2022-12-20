@@ -134,7 +134,13 @@
                         }"
                         >View Profile</router-link
                       >
-                      <router-link class="apt-btn" to="/booking"
+                      <router-link
+                        v-if="userLoggedIn"
+                        class="apt-btn"
+                        :to="{
+                          name: 'book',
+                          params: { id: teacher.id },
+                        }"
                         >Book Appointment</router-link
                       >
                     </div>
@@ -153,6 +159,8 @@
 
 <script>
 import axios from "axios";
+import { mapState } from "pinia";
+import useUserStore from "@/stores/user";
 import SearchSidebar from "@/components/SearchSidebar.vue";
 
 export default {
@@ -225,6 +233,7 @@ export default {
     },
   },
   computed: {
+    ...mapState(useUserStore, ["userLoggedIn"]),
     filteredTeacher() {
       return this.teachers
         .filter((teacher) => {

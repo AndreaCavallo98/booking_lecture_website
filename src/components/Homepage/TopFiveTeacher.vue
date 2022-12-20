@@ -96,7 +96,7 @@
                   </button>
                 </p>
                 <div class="row row-sm">
-                  <div class="col-6">
+                  <div class="col">
                     <router-link
                       :to="{
                         name: 'teacher',
@@ -106,8 +106,13 @@
                       >View Profile</router-link
                     >
                   </div>
-                  <div class="col-6">
-                    <router-link to="/booking" class="btn book-btn"
+                  <div v-if="userLoggedIn" class="col">
+                    <router-link
+                      :to="{
+                        name: 'book',
+                        params: { id: teacher.id },
+                      }"
+                      class="btn book-btn"
                       >Book Now</router-link
                     >
                   </div>
@@ -124,6 +129,8 @@
 </template>
 <script>
 import axios from "axios";
+import { mapState } from "pinia";
+import useUserStore from "@/stores/user";
 
 export default {
   data() {
@@ -151,6 +158,9 @@ export default {
         variableWidth: true,
       });
     }
+  },
+  computed: {
+    ...mapState(useUserStore, ["userLoggedIn"]),
   },
   methods: {},
 };
