@@ -5,6 +5,7 @@ import Homepage from "@/views/Homepage.vue";
 import Teachers from "@/views/Teachers.vue";
 import TeacherDetails from "@/views/TeacherDetails.vue";
 import BookLecture from "@/views/BookLecture.vue";
+import MyBookings from "@/views/MyBookings.vue";
 
 const routes = [
   {
@@ -28,14 +29,9 @@ const routes = [
     component: BookLecture,
   },
   {
-    name: "bookings",
-    path: "/bookings",
-    component: Homepage,
-  },
-  {
-    name: "profile",
-    path: "/profile",
-    component: Homepage,
+    name: "mybookings",
+    path: "/mybookings",
+    component: MyBookings,
   },
 ];
 

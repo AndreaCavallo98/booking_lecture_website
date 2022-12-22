@@ -35,7 +35,7 @@
               <div class="doc-info-left">
                 <div class="doctor-img">
                   <img
-                    src="@/assets/img/teachers/nofototeacher.jpeg"
+                    src="@/assets/img/teachers/nofototeacher.png"
                     class="img-fluid"
                     alt="User Image"
                   />
@@ -148,7 +148,7 @@
                         <img
                           class="avatar avatar-sm rounded-circle"
                           alt="User Image"
-                          src="@/assets/img/teachers/nofototeacher.jpeg"
+                          src="@/assets/img/teachers/nofototeacher.png"
                         />
                         <div class="comment-body">
                           <div class="meta-data">

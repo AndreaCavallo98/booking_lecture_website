@@ -50,10 +50,10 @@ export default {
 
 
 [TO DO]
-- Autenticazione
+- Autenticazione (pulizia, errori e expired token)
 - Finire homepage
-- Finire pagina teachers
-- Calendario prenotazione
+- Finire pagina teachers (filtri e fix)
+- perche calendario mi da errore: "Uncaught (in promise) TypeError: Cannot read properties of null"
 - Mie prenotazioni + recensione
 - Profilo
 - Admin
@@ -67,6 +67,8 @@ export default {
 - slider max hourly rate
 - teacher/id sbagliato non riporta correttamente alla homepage
 - click on slick slider stop propagation
+- meta field in route
+- se entro in pagina e non sono loggato butta fuori
 
 */
 </script>

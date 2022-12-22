@@ -78,7 +78,7 @@ export default {
 
     if ($(".specialities-slider").length > 0) {
       $(".specialities-slider").slick({
-        dots: true,
+        dots: false,
         autoplay: true,
         infinite: true,
         variableWidth: true,

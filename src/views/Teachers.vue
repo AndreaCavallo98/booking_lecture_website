@@ -63,7 +63,7 @@
                         }"
                       >
                         <img
-                          src="@/assets/img/teachers/nofototeacher.jpeg"
+                          src="@/assets/img/teachers/nofototeacher.png"
                           class="img-fluid"
                           alt="User Image"
                         />

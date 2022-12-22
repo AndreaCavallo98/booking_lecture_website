@@ -5,8 +5,8 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="section-header aos" data-aos="fade-up">
-            <h2 style="color: #d68325">Learn from the best teachers!</h2>
-            <p>Here we bring you the 5 best-reviewed teachers!</p>
+            <h2 style="color: #d68325">Top 5 reviewed teacher</h2>
+            <p>Learn from the best teachers!</p>
           </div>
           <div class="about-content aos" data-aos="fade-up">
             <p>
@@ -35,7 +35,7 @@
                   <img
                     class="img-fluid"
                     alt="User Image"
-                    src="@/assets/img/teachers/nofototeacher.jpeg"
+                    src="@/assets/img/teachers/nofototeacher.png"
                   />
                 </router-link>
               </div>

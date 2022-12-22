@@ -42,10 +42,9 @@
           </li>
           <template v-if="userLoggedIn">
             <li :class="currentPath == 'index' ? 'active' : 'notactive'">
-              <router-link :to="{ name: 'bookings' }">My Bookings</router-link>
-            </li>
-            <li :class="currentPath == 'index' ? 'active' : 'notactive'">
-              <router-link :to="{ name: 'profile' }">Profile</router-link>
+              <router-link :to="{ name: 'mybookings' }"
+                >My Bookings & Profile</router-link
+              >
             </li>
           </template>
           <li v-if="userRole == 'admin'" class="has-submenu">
@@ -124,6 +123,7 @@ export default {
     ...mapActions(useUserStore, ["logout"]),
     signOut() {
       this.logout();
+      this.$router.push({ name: "homepage" });
     },
   },
 };
