@@ -266,7 +266,6 @@ export default {
         });
     },
     async saveBooking() {
-      console.log(this.bookingSelectedCourse);
       await axios
         .post(
           "http://localhost:8080/Prenotazioni0_war_exploded/ServletBooking",

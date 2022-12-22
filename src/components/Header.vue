@@ -34,14 +34,14 @@
           </a>
         </div>
         <ul class="main-nav">
-          <li :class="currentPath == 'index' ? 'active' : 'notactive'">
+          <li :class="currentPath == 'homepage' ? 'active' : 'notactive'">
             <router-link :to="{ name: 'homepage' }">Home</router-link>
           </li>
-          <li :class="currentPath == 'index' ? 'active' : 'notactive'">
+          <li :class="currentPath == 'teachers' ? 'active' : 'notactive'">
             <router-link :to="{ name: 'teachers' }">Teachers</router-link>
           </li>
           <template v-if="userLoggedIn">
-            <li :class="currentPath == 'index' ? 'active' : 'notactive'">
+            <li :class="currentPath == 'mybookings' ? 'active' : 'notactive'">
               <router-link :to="{ name: 'mybookings' }"
                 >My Bookings & Profile</router-link
               >

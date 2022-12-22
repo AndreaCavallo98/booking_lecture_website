@@ -51,17 +51,14 @@ export default {
 
 [TO DO]
 - Autenticazione (pulizia, errori e expired token)
-- Finire homepage
-- Finire pagina teachers (filtri e fix)
+- Finire pagina teachers (ordina e fix)
 - perche calendario mi da errore: "Uncaught (in promise) TypeError: Cannot read properties of null"
-- Mie prenotazioni + recensione
-- Profilo
-- Admin
+- Admin OGGI
 
 [ADDITIONAL FUNCTIONS]
-- pwa
-- internalization
-- dark mode
+- pwa [2]
+- internalization [1]
+- dark mode [3]
 
 [FIX]
 - slider max hourly rate
@@ -69,6 +66,7 @@ export default {
 - click on slick slider stop propagation
 - meta field in route
 - se entro in pagina e non sono loggato butta fuori
+- se uno recensisce da telefono e poi non refresha da sito dove ha abilitato ancora review inconsistenze (check nel backend)
 
 */
 </script>

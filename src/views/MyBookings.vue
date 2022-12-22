@@ -116,103 +116,104 @@
                 <div class="card">
                   <div class="card-body pt-2 pb-2 mt-1 mb-1">
                     <div class="row">
-                      <div
-                        class="col-12 col-md-6 col-lg-4 col-xl-3 patient-graph-box"
-                      >
+                      <div class="col patient-graph-box">
                         <a
-                          href="javascript:void(0);"
                           class="graph-box"
                           data-bs-toggle="modal"
                           data-bs-target="#graph1"
                         >
                           <div>
-                            <h4>BMI Status</h4>
+                            <h4>PENDING</h4>
                           </div>
                           <div class="graph-img">
-                            <img
-                              src="../../../../../assets/img/shapes/graph-01.png"
-                              alt=""
-                            />
-                          </div>
-                          <div class="graph-status-result mt-3">
-                            <span class="graph-update-date"
-                              >Last Update 6d</span
-                            >
+                            <h1 style="color: white">
+                              {{
+                                filteredBookings.filter(
+                                  (booking) =>
+                                    booking.confirmed == false &&
+                                    !booking.deleted
+                                ).length
+                              }}
+                            </h1>
                           </div>
                         </a>
                       </div>
-                      <div
-                        class="col-12 col-md-6 col-lg-4 col-xl-3 patient-graph-box"
-                      >
+                      <div class="col patient-graph-box">
                         <a
-                          href="javascript:void(0);"
-                          class="graph-box pink-graph"
+                          class="graph-box green-graph"
                           data-bs-toggle="modal"
                           data-bs-target="#graph2"
                         >
                           <div>
-                            <h4>Heart Rate Status</h4>
+                            <h4>MISSING REVIEW</h4>
                           </div>
                           <div class="graph-img">
-                            <img
-                              src="../../../../../assets/img/shapes/graph-02.png"
-                              alt=""
-                            />
-                          </div>
-                          <div class="graph-status-result mt-3">
-                            <span class="graph-update-date"
-                              >Last Update 2d</span
-                            >
+                            <h1 style="color: white">
+                              {{
+                                filteredBookings.filter(
+                                  (booking) =>
+                                    booking.confirmed == true &&
+                                    !booking.has_review
+                                ).length
+                              }}
+                            </h1>
                           </div>
                         </a>
                       </div>
-                      <div
-                        class="col-12 col-md-6 col-lg-4 col-xl-3 patient-graph-box"
-                      >
+                      <div class="col patient-graph-box">
                         <a
-                          href="javascript:void(0);"
-                          class="graph-box sky-blue-graph"
+                          class="graph-box yellow-graph"
+                          data-bs-toggle="modal"
+                          data-bs-target="#graph2"
+                        >
+                          <div>
+                            <h4>REVIEWED</h4>
+                          </div>
+                          <div class="graph-img">
+                            <h1 style="color: white">
+                              {{
+                                bookings.filter(
+                                  (booking) => booking.has_review == true
+                                ).length
+                              }}
+                            </h1>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col patient-graph-box">
+                        <a
+                          class="graph-box pink-graph"
                           data-bs-toggle="modal"
                           data-bs-target="#graph3"
                         >
                           <div>
-                            <h4>FBC Status</h4>
+                            <h4>DELETED</h4>
                           </div>
                           <div class="graph-img">
-                            <img
-                              src="../../../../../assets/img/shapes/graph-03.png"
-                              alt=""
-                            />
-                          </div>
-                          <div class="graph-status-result mt-3">
-                            <span class="graph-update-date"
-                              >Last Update 5d</span
-                            >
+                            <h1 style="color: white">
+                              {{
+                                bookings.filter(
+                                  (booking) => booking.deleted == true
+                                ).length
+                              }}
+                            </h1>
                           </div>
                         </a>
                       </div>
-                      <div
-                        class="col-12 col-md-6 col-lg-4 col-xl-3 patient-graph-box"
-                      >
+                      <div class="col patient-graph-box">
                         <a
                           href="javascript:void(0);"
-                          class="graph-box orange-graph"
+                          class="graph-box sky-blue-graph"
                           data-bs-toggle="modal"
                           data-bs-target="#graph4"
                         >
                           <div>
-                            <h4>Weight Status</h4>
+                            <h4>ALL</h4>
                           </div>
                           <div class="graph-img">
-                            <img
-                              src="../../../../../assets/img/shapes/graph-04.png"
-                              alt=""
-                            />
-                          </div>
-                          <div class="graph-status-result mt-3">
-                            <span class="graph-update-date"
-                              >Last Update 3d</span
-                            >
+                            <h1 style="color: white">
+                              {{ bookings.length }}
+                            </h1>
                           </div>
                         </a>
                       </div>
@@ -358,7 +359,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myLargeModalLabel">
-            Rate to <strong>{{ name_teacher_reviewed }}</strong>
+            Rate to
+            <strong>{{ name_teacher_reviewed }} </strong> about your completed
+            lecture
           </h4>
           <button
             class="btn-close"
@@ -373,11 +376,12 @@
           <!-- Write Review -->
           <div class="write-review">
             <!-- Write Review Form -->
-            <form>
-              <div class="form-group">
-                <label>Review</label>
+            <vee-form :validation-schema="reviewSchema" @submit="saveReview">
+              <div class="form-group" style="text-align: center">
+                <label><strong>Choose your rate</strong></label>
                 <div class="star-rating">
                   <input
+                    class="get_value"
                     id="star-5"
                     type="radio"
                     name="rating"
@@ -387,6 +391,7 @@
                     <i class="active fa fa-star"></i>
                   </label>
                   <input
+                    class="get_value"
                     id="star-4"
                     type="radio"
                     name="rating"
@@ -396,6 +401,7 @@
                     <i class="active fa fa-star"></i>
                   </label>
                   <input
+                    class="get_value"
                     id="star-3"
                     type="radio"
                     name="rating"
@@ -405,6 +411,7 @@
                     <i class="active fa fa-star"></i>
                   </label>
                   <input
+                    class="get_value"
                     id="star-2"
                     type="radio"
                     name="rating"
@@ -414,10 +421,12 @@
                     <i class="active fa fa-star"></i>
                   </label>
                   <input
+                    class="get_value"
                     id="star-1"
                     type="radio"
                     name="rating"
                     value="star-1"
+                    checked
                   />
                   <label for="star-1" title="1 star">
                     <i class="active fa fa-star"></i>
@@ -426,23 +435,31 @@
               </div>
               <div class="form-group">
                 <label>Title of your review</label>
-                <input
+                <vee-field
+                  name="title"
                   class="form-control"
                   type="text"
                   placeholder="If you could say it in one sentence, what would you say?"
                 />
+                <ErrorMessage class="veeinvalid" name="title" />
               </div>
               <div class="form-group">
                 <label>Your review</label>
-                <textarea id="review_desc" class="form-control"></textarea>
+                <vee-field
+                  as="textarea"
+                  name="text"
+                  id="review_desc"
+                  class="form-control"
+                ></vee-field>
+                <ErrorMessage class="veeinvalid" name="text" />
               </div>
               <hr />
-              <div class="submit-section">
+              <div class="submit-section" style="text-align: center">
                 <button type="submit" class="btn btn-primary submit-btn">
                   Add Review
                 </button>
               </div>
-            </form>
+            </vee-form>
             <!-- /Write Review Form -->
           </div>
           <!-- /Write Review -->
@@ -483,6 +500,9 @@ export default {
         if (response.status != 401) {
           if (response.status == 200) {
             this.bookings = response.data;
+            if (this.$route.query.date != null) {
+              this.lectureDate = this.convertedDate(this.$route.query.date, 0);
+            }
           } else {
             console.log(response.status);
           }
@@ -501,6 +521,10 @@ export default {
       showArchivied: false,
       lectureDate: null,
 
+      reviewSchema: {
+        title: "required",
+        text: "required",
+      },
       name_teacher_reviewed: "",
       reviewedBookingId: -1,
     };
@@ -550,7 +574,8 @@ export default {
             )
             .then((response) => {
               if (response.status == 200) {
-                this.bookings[index].deleted = true;
+                var foundIndex = this.bookings.findIndex((x) => x.id == id);
+                this.bookings[foundIndex].deleted = true;
                 Swal.fire(
                   "Deleted!",
                   "Your booking has been deleted.",
@@ -623,6 +648,54 @@ export default {
       this.name_teacher_reviewed = teacherName;
       this.reviewedBookingId = bookingId;
       $("#review_modal").modal("show");
+    },
+    async saveReview(values) {
+      let rate = jQuery(".get_value:checked").val();
+      let rateNumber = rate.substring(rate.indexOf("-") + 1);
+
+      await axios
+        .post(
+          "http://localhost:8080/Prenotazioni0_war_exploded/ServletReview",
+          {
+            bookingid: this.reviewedBookingId,
+            rate: rateNumber,
+            title: values.title,
+            text: values.text,
+          },
+          {
+            headers: {
+              Authorization: this.userJwtToken,
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+          }
+        )
+        .then((response) => {
+          if (response.status != 401) {
+            if (response.status == 200) {
+              $("#review_modal").modal("hide");
+              var foundIndex = this.bookings.findIndex(
+                (x) => x.id == this.reviewedBookingId
+              );
+              this.bookings[foundIndex].has_review = true;
+              Swal.fire(
+                "Review saved!",
+                "Your review has been saved.",
+                "success"
+              );
+            } else {
+              Swal.fire("Attention!", "Error during saving review", "error");
+            }
+          } else {
+            Swal.fire(
+              "Attention!",
+              "You don't have right to do this operation",
+              "error"
+            );
+          }
+        })
+        .catch((error) => {
+          Swal.fire("Error!", error.message, "error");
+        });
     },
     formatDate(date) {
       var currentDate = date;

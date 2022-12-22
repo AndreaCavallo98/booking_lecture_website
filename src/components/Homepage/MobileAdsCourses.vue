@@ -2,15 +2,7 @@
   <section class="section section-features">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4 features-img aos" data-aos="fade-up">
-          <h3 class="mt-2">Download IOS & Android Application</h3>
-          <img
-            src="@/assets/img/Homepage/iphonemockup.jpg"
-            class="img-fluid"
-            alt="Feature"
-          />
-        </div>
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="section section-specialities">
             <div class="container-fluid">
               <div class="section-header text-center aos" data-aos="fade-up">

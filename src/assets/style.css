@@ -2314,7 +2314,7 @@ button.bg-danger:hover {
   padding: 0;
 }
 .main-nav > li.active > a {
-  color: #10defd;
+  color: #d68325;
 }
 .main-nav > li .submenu li a {
   display: block;
@@ -3780,7 +3780,7 @@ html.menu-opened body {
   background-repeat: repeat;
 }
 .section-header {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 .section-header h2 {
   font-size: 36px;
@@ -3874,7 +3874,7 @@ html.menu-opened body {
 }
 .section-specialities {
   background-color: #fff;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 .slick-dots {
   position: absolute;
@@ -4020,7 +4020,7 @@ html.menu-opened body {
 }
 .section-specialities {
   background-color: #fff;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 .section-category {
   background-color: #fff;
@@ -4127,6 +4127,14 @@ html.menu-opened body {
   box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.1);
   border-radius: 15%;
   width: 150px;
+  background: #fff;
+}
+.speicality-img-upcoming {
+  position: relative;
+  height: 100px;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.1);
+  border-radius: 15%;
+  width: 100px;
   background: #fff;
 }
 .speicality-img img {
@@ -4406,7 +4414,6 @@ html.menu-opened body {
 }
 .section-features {
   background-color: #fff;
-  padding: 80px 0;
 }
 .feature-item img {
   border-radius: 100%;
@@ -4827,7 +4834,7 @@ select {
   background-repeat: no-repeat;
 }
 .section-header-three {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .section-header-three h2 {
   color: #2868c8;
@@ -9501,6 +9508,14 @@ body .multi-optn {
   background-color: #ffa69e;
   border-bottom: 8px solid #fe9286;
 }
+.patient-graph-col .graph-box.green-graph {
+  background-color: #9ae59a;
+  border-bottom: 8px solid #2fb62f;
+}
+.patient-graph-col .graph-box.yellow-graph {
+  background-color: #ffcc80;
+  border-bottom: 8px solid #d68325;
+}
 .patient-graph-col .graph-box.sky-blue-graph {
   background-color: #a9d4ff;
   border-bottom: 8px solid #8ec4ff;
@@ -11607,7 +11622,7 @@ ul.benifits-col li i {
 -----------------------*/
 
 .home-one-banner {
-  background: #e5f1fb;
+  background: #ffebcc;
   padding: 20px 0 0px;
   font-family: "Encode Sans", sans-serif;
   position: relative;
@@ -12048,13 +12063,13 @@ ul.benifits-col li i {
   transition: 0.7s;
 }
 .appointment-grid:hover .appointment-link {
-  color: #0071dc;
+  color: #d68325;
 }
 .appointment-grid:hover .appointment-read-btn {
   color: #fff;
-  background: #0071dc;
-  border: 1px solid #0071dc;
-  box-shadow: inset 0 50px 0 0 #0071dc;
+  background: #d68325;
+  border: 1px solid #d68325;
+  box-shadow: inset 0 50px 0 0 #d68325;
   -webkit-transition: 0.7s;
   -moz-transition: 0.7s;
   -o-transition: 0.7s;
