@@ -53,12 +53,10 @@ export default {
 - Autenticazione (pulizia, errori e expired token)
 - Finire pagina teachers (ordina e fix)
 - perche calendario mi da errore: "Uncaught (in promise) TypeError: Cannot read properties of null"
-- Admin OGGI
 
 [ADDITIONAL FUNCTIONS]
 - pwa [2]
 - internalization [1]
-- dark mode [3]
 
 [FIX]
 - slider max hourly rate

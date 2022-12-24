@@ -45,6 +45,7 @@
                 type="password"
                 class="form-control"
                 placeholder="Password"
+                autocomplete="on"
               />
               <ErrorMessage class="veeinvalid" name="password" />
             </div>

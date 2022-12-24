@@ -72,35 +72,9 @@
   </section>
 </template>
 <script>
-import axios from "axios";
-
 export default {
   data() {
-    return {
-      courses: [],
-    };
-  },
-  mounted() {},
-  async created() {
-    await axios
-      .get("http://localhost:8080/Prenotazioni0_war_exploded/ServletCourse")
-      .then((response) => {
-        this.courses = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
-    if ($(".specialities-slider").length > 0) {
-      $(".specialities-slider").slick({
-        dots: true,
-        autoplay: true,
-        infinite: true,
-        variableWidth: true,
-        draggable: false,
-        autoplaySpeed: 500,
-      });
-    }
+    return {};
   },
 };
 </script>

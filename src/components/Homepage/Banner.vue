@@ -214,38 +214,40 @@ import useUserStore from "@/stores/user";
 
 export default {
   name: "Banner",
-  async mounted() {
-    if (this.userLoggedIn == true) {
-      await axios
-        .get(
-          "http://localhost:8080/Prenotazioni0_war_exploded/ServletBooking?userid=" +
-            this.userId +
-            "&dailyupcoming=true",
-          {
-            headers: {
-              Authorization: this.userJwtToken,
-              "Content-Type": "application/json",
-            },
-          }
-        )
-        .then((response) => {
-          if (response.status != 401) {
-            if (response.status == 200) {
-              this.upcomingLectures = response.data;
-              console.log(response.data);
-            } else {
-              console.log(response.status);
-            }
+
+  async created() {
+    //if (this.userLoggedIn == true) {
+    await axios
+      .get(
+        "http://localhost:8080/Prenotazioni0_war_exploded/ServletBooking?userid=" +
+          this.userId +
+          "&dailyupcoming=true",
+        {
+          headers: {
+            Authorization: this.userJwtToken,
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response);
+        if (response.status != 401) {
+          if (response.status == 200) {
+            this.upcomingLectures = response.data;
+            console.log(response.data);
           } else {
-            // Sbatti fuori
+            console.log(response.status);
           }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
+        } else {
+          // Sbatti fuori
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    //}
   },
-  created() {},
+
   computed: {
     ...mapState(useUserStore, ["userLoggedIn", "userId", "userJwtToken"]),
   },

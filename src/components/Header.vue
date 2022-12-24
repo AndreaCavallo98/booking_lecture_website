@@ -47,45 +47,12 @@
               >
             </li>
           </template>
-          <li v-if="userRole == 'admin'" class="has-submenu">
-            <a href="javascript:void(0);" target="_blank"
-              >Admin <i class="fas fa-chevron-down"></i
-            ></a>
-            <ul class="submenu">
-              <li>
-                <router-link to="/admin/login" target="_blank"
-                  >Manage courses</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/pharmacyadmin/login" target="_blank"
-                  >Manage teachers</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/pharmacyadmin/login" target="_blank"
-                  >Manage bookings</router-link
-                >
-              </li>
-            </ul>
+          <li
+            v-if="userRole == 'admin'"
+            :class="currentPath == 'admin' ? 'active' : 'notactive'"
+          >
+            <router-link :to="{ name: 'admin' }">Admin</router-link>
           </li>
-          <!--<li class="has-submenu">
-            <a href="javascript:void(0);" target="_blank"
-              >Admin <i class="fas fa-chevron-down"></i
-            ></a>
-            <ul class="submenu">
-              <li>
-                <router-link to="/admin/login" target="_blank"
-                  >Admin</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/pharmacyadmin/login" target="_blank"
-                  >Pharmacy Admin</router-link
-                >
-              </li>
-            </ul>
-          </li>-->
         </ul>
       </div>
       <ul class="nav header-navbar-rht">
