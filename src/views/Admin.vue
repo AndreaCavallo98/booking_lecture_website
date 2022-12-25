@@ -182,9 +182,9 @@
                                             <td>
                                               <div class="table-action">
                                                 <a
-                                                  @click="
-                                                    udpateTeachedCourses(
-                                                      teacher.id
+                                                  @click.prevent="
+                                                    openModalUdpateTeachedCourses(
+                                                      teacher
                                                     )
                                                   "
                                                   class="btn btn-sm bg-info-light me-1"
@@ -246,7 +246,8 @@
     </div>
     <!-- /Page Content -->
   </div>
-  <!-- Add Dependent Modal-->
+
+  <!-- New Course Modal-->
   <div
     id="modal_addcourse"
     class="modal fade custom-modal"
@@ -300,9 +301,8 @@
       </div>
     </div>
   </div>
-  <!-- /Add Dependent Modal-->
 
-  <!-- Add Teacher Modal-->
+  <!-- New Teacher Modal-->
   <div
     id="modal_addteacher"
     class="modal fade custom-modal"
@@ -382,6 +382,7 @@
     </div>
   </div>
 
+  <!-- Update Teacher courses Modal-->
   <div
     id="modal_updateTeachedCourses"
     class="modal fade custom-modal"
@@ -391,9 +392,12 @@
   >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <vee-form :validation-schema="teacherSchema" @submit="addTeacher">
+        <form>
           <div class="modal-header">
-            <h5 class="modal-title">Select teached courses</h5>
+            <h5 class="modal-title">
+              Select {{ modalTeacher == null ? "" : modalTeacher.name }}'s
+              teached courses
+            </h5>
             <button
               type="button"
               class="close"
@@ -408,8 +412,15 @@
               <label class="custom_check">
                 <input
                   type="checkbox"
-                  name="select_specialist"
+                  name="course_checkbox"
                   :value="course.id"
+                  :checked="
+                    modalTeacher == null
+                      ? false
+                      : modalTeacher.teached_courses.find(
+                          (tCourse) => tCourse.id == course.id
+                        )
+                  "
                 />
                 <span class="checkmark"></span
                 ><i
@@ -421,11 +432,14 @@
             </div>
           </div>
           <div class="modal-footer text-center">
-            <button type="submit" class="btn btn-primary submit-btn">
+            <button
+              @click.prevent="updateTeacherCourses"
+              class="btn btn-primary submit-btn"
+            >
               Save Teached courses
             </button>
           </div>
-        </vee-form>
+        </form>
       </div>
     </div>
   </div>
@@ -441,7 +455,14 @@ export default {
   components: {
     Swal,
   },
-  mounted() {},
+  mounted() {
+    /*$("#modal_updateTeachedCourses").on("hidden.bs.modal", function () {
+      var arrMarkMail = document.getElementsByName("course_checkbox");
+      for (var i = 0; i < arrMarkMail.length; i++) {
+        arrMarkMail[i].checked = false;
+      }
+    });*/
+  },
   async created() {
     await axios
       .get(
@@ -498,6 +519,7 @@ export default {
       bookings: [],
 
       mainSelectCourses: [],
+      modalTeacher: null,
     };
   },
   methods: {
@@ -530,7 +552,8 @@ export default {
                   active: true,
                 };
 
-                this.courses.unshift(course);
+                this.courses.push(course);
+                this.mainSelectCourses.push(course);
 
                 Swal.fire(
                   "Course saved!",
@@ -591,6 +614,7 @@ export default {
         .post(
           "http://localhost:8080/Prenotazioni0_war_exploded/ServletTeacher",
           {
+            action: "newteacher",
             name: values.name,
             surname: values.surname,
             description: values.description,
@@ -623,6 +647,11 @@ export default {
                   hourly_rate: values.hourly_rate,
                   image_name: "",
                   active: true,
+                  teached_courses: [
+                    {
+                      id: this.mainSelectedCourse,
+                    },
+                  ],
                 };
 
                 this.teachers.unshift(teacher);
@@ -685,8 +714,80 @@ export default {
           //Swal.fire("Attention!", error.message, "error");
         });
     },
-    async udpateTeachedCourses(id) {
+    openModalUdpateTeachedCourses(teacher) {
+      this.modalTeacher = teacher;
+
       $("#modal_updateTeachedCourses").modal("show");
+    },
+    async updateTeacherCourses() {
+      let checkedCoursesArray = [];
+      $("input:checkbox[name=course_checkbox]:checked").each(function () {
+        checkedCoursesArray.push($(this).val());
+      });
+
+      if (checkedCoursesArray.length <= 0) {
+        Swal.fire(
+          "Attention!",
+          "One teacher must have one teached course at least",
+          "error"
+        );
+      } else {
+        await axios
+          .post(
+            "http://localhost:8080/Prenotazioni0_war_exploded/ServletTeacher",
+            {
+              action: "courseassociation",
+              idteacher: this.modalTeacher.id,
+              coursearray: JSON.stringify(checkedCoursesArray),
+            },
+            {
+              headers: {
+                Authorization: this.userJwtToken,
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+            }
+          )
+          .then((response) => {
+            if (response.status != 401) {
+              if (response.status == 200) {
+                var foundIndex = this.teachers.findIndex(
+                  (x) => x.id == this.modalTeacher.id
+                );
+
+                // => TO DO
+                var data = checkedCoursesArray.map(function (el, i) {
+                  return {
+                    id: el,
+                  };
+                });
+
+                this.teachers[foundIndex].teached_courses = data;
+
+                $("#modal_updateTeachedCourses").modal("hide");
+                Swal.fire(
+                  "Teacher courses saved!",
+                  "Your teacher teached courses has been updated.",
+                  "success"
+                );
+              } else {
+                Swal.fire(
+                  "Attention!",
+                  "Error during updating teacher courses",
+                  "error"
+                );
+              }
+            } else {
+              Swal.fire(
+                "Attention!",
+                "You don't have right to do this operation",
+                "error"
+              );
+            }
+          })
+          .catch((error) => {
+            Swal.fire("Error!", error.message, "error");
+          });
+      }
     },
   },
   computed: {

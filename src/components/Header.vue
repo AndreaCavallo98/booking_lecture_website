@@ -90,7 +90,10 @@ export default {
     ...mapActions(useUserStore, ["logout"]),
     signOut() {
       this.logout();
-      this.$router.push({ name: "homepage" });
+
+      if (this.$route.meta.requiresAuth || this.$route.meta.requiresAdmin) {
+        this.$router.push({ name: "homepage" });
+      }
     },
   },
 };

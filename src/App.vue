@@ -56,14 +56,11 @@ export default {
 
 [ADDITIONAL FUNCTIONS]
 - pwa [2]
-- internalization [1]
+
 
 [FIX]
 - slider max hourly rate
 - teacher/id sbagliato non riporta correttamente alla homepage
-- click on slick slider stop propagation
-- meta field in route
-- se entro in pagina e non sono loggato butta fuori
 - se uno recensisce da telefono e poi non refresha da sito dove ha abilitato ancora review inconsistenze (check nel backend)
 
 */

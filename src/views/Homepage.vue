@@ -1,8 +1,10 @@
 <template>
-  <app-banner></app-banner>
-  <app-mobile-ads-courses></app-mobile-ads-courses>
-  <app-top-five-teacher></app-top-five-teacher>
-  <app-mobile-ads></app-mobile-ads>
+  <div class="main-wrapper">
+    <app-banner></app-banner>
+    <app-mobile-ads-courses></app-mobile-ads-courses>
+    <app-top-five-teacher></app-top-five-teacher>
+    <app-mobile-ads></app-mobile-ads>
+  </div>
 </template>
 
 <script>

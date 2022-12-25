@@ -216,7 +216,7 @@ export default {
       )
       .then((response) => {
         if (response.data == null) {
-          this.$router.push({ path: "/" });
+          this.$router.push({ name: "homepage" });
           return;
         }
         this.teacher = response.data;
