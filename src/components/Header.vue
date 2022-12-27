@@ -10,8 +10,8 @@
             <span></span>
           </span>
         </a>
-        <router-link to="/" class="navbar-brand logo">
-          <h5>BOOKING LECTURE</h5>
+        <router-link :to="{ name: 'homepage' }" class="navbar-brand logo">
+          <h5 style="color: #d68325">BOOKING LECTURE</h5>
           <!--<img
               src="../../../assets/img/logo.png"
               class="img-fluid"
@@ -65,9 +65,12 @@
             >login / Signup</a
           >
         </li>
-        <li @click.prevent="signOut" v-else class="nav-item">
-          <a class="nav-link header-login btn-one-light">Logout</a>
-        </li>
+        <template v-else>
+          <li class="nav-item">Hi {{ userName }}!</li>
+          <li @click.prevent="signOut" class="nav-item">
+            <a class="nav-link header-login btn-one-light">Logout</a>
+          </li>
+        </template>
       </ul>
     </nav>
   </header>
@@ -81,7 +84,7 @@ import useUserStore from "@/stores/user";
 export default {
   name: "AppHeader",
   computed: {
-    ...mapState(useUserStore, ["userLoggedIn", "userRole"]),
+    ...mapState(useUserStore, ["userLoggedIn", "userRole", "userName"]),
     currentPath() {
       return this.$route.name;
     },

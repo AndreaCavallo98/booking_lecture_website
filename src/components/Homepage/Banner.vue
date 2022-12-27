@@ -147,7 +147,7 @@
                   </div>
                 </div>
                 <div v-else class="appointment-grid w-100">
-                  <div class="speicality-item text-center">
+                  <div class="text-center">
                     <div class="row">
                       <div
                         class="speicality-img-upcoming col-6"
@@ -230,11 +230,9 @@ export default {
         }
       )
       .then((response) => {
-        console.log(response);
         if (response.status != 401) {
           if (response.status == 200) {
             this.upcomingLectures = response.data;
-            console.log(response.data);
           } else {
             console.log(response.status);
           }

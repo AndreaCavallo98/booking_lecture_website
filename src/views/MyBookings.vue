@@ -49,13 +49,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="patient-info">
-                    <ul>
-                      <li>Phone <span>+1 952 001 8563</span></li>
-                      <li>Age <span>38 Years, Male</span></li>
-                      <li>Blood Group <span>AB+</span></li>
-                    </ul>
-                  </div>
                 </div>
               </div>
               <!-- /Profile Widget -->

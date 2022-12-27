@@ -19,14 +19,7 @@
               {{ filteredTeacher.length }} teachers found
             </h2>
           </div>
-          <div class="col-md-4 col-12 d-md-block d-none">
-            <div class="sort-by">
-              <span class="sort-title">Sort by</span>
-              <span class="sortby-fliter">
-                <vue-select :options="searchfilter" />
-              </span>
-            </div>
-          </div>
+          <div class="col-md-4 col-12 d-md-block d-none"></div>
         </div>
       </div>
     </div>

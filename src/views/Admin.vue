@@ -236,6 +236,375 @@
                     </div>
                     <!-- /Page Content -->
                   </div>
+                  <div id="pat_medical_records" class="tab-pane fade">
+                    <div class="content">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div
+                            class="col-md-3 col-lg-3 col-xl-3 theiaStickySidebar"
+                          >
+                            <div class="stickyside">
+                              <div class="card search-filter">
+                                <div class="card-header">
+                                  <h4
+                                    class="card-title mb-0"
+                                    style="color: #d68325"
+                                  >
+                                    Search Filter
+                                  </h4>
+                                </div>
+                                <div class="card-body">
+                                  <div class="filter-widget">
+                                    <select
+                                      class="form-select"
+                                      v-model="selectedUser"
+                                    >
+                                      <option class="sorting" :value="-1">
+                                        No selected user
+                                      </option>
+                                      <option
+                                        class="sorting"
+                                        :value="user.id"
+                                        v-for="user in users"
+                                        :key="user.id"
+                                      >
+                                        {{ user.name }} {{ user.surname }}
+                                      </option>
+                                    </select>
+                                  </div>
+                                  <div class="filter-widget">
+                                    <h4>Filter date</h4>
+                                    <div class="cal-icon">
+                                      <DatePicker
+                                        reset-button
+                                        v-model="lectureDate"
+                                        class="picker"
+                                        :editable="true"
+                                        :clearable="true"
+                                        input-format="dd/MM/yyyy"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="filter-widget">
+                                    <div>
+                                      <label class="custom_check">
+                                        <input
+                                          type="checkbox"
+                                          name="gender_type"
+                                          v-model="showDeleted"
+                                        />
+                                        <span class="checkmark"></span>
+                                        <i
+                                          class="fas fa-trash"
+                                          style="color: red"
+                                        ></i>
+                                        Show deleted
+                                      </label>
+                                    </div>
+                                    <div>
+                                      <label class="custom_check">
+                                        <input
+                                          type="checkbox"
+                                          name="gender_type"
+                                          v-model="showArchivied"
+                                        />
+                                        <span class="checkmark"></span>
+                                        <i
+                                          class="fas fa-history"
+                                          style="color: green"
+                                        ></i>
+                                        Show archivied
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-9 col-lg-9 col-xl-9">
+                            <div class="row patient-graph-col">
+                              <div class="col-12">
+                                <div class="card">
+                                  <div class="card-body pt-2 pb-2 mt-1 mb-1">
+                                    <div class="row">
+                                      <div class="col patient-graph-box">
+                                        <a
+                                          class="graph-box"
+                                          data-bs-toggle="modal"
+                                          data-bs-target="#graph1"
+                                        >
+                                          <div>
+                                            <h4>PENDING</h4>
+                                          </div>
+                                          <div class="graph-img">
+                                            <h1 style="color: white">
+                                              {{
+                                                filteredBookings.filter(
+                                                  (booking) =>
+                                                    booking.confirmed ==
+                                                      false && !booking.deleted
+                                                ).length
+                                              }}
+                                            </h1>
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div class="col patient-graph-box">
+                                        <a
+                                          class="graph-box green-graph"
+                                          data-bs-toggle="modal"
+                                          data-bs-target="#graph2"
+                                        >
+                                          <div>
+                                            <h4>MISSING REVIEW</h4>
+                                          </div>
+                                          <div class="graph-img">
+                                            <h1 style="color: white">
+                                              {{
+                                                filteredBookings.filter(
+                                                  (booking) =>
+                                                    booking.confirmed == true &&
+                                                    !booking.has_review
+                                                ).length
+                                              }}
+                                            </h1>
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div class="col patient-graph-box">
+                                        <a
+                                          class="graph-box yellow-graph"
+                                          data-bs-toggle="modal"
+                                          data-bs-target="#graph2"
+                                        >
+                                          <div>
+                                            <h4>REVIEWED</h4>
+                                          </div>
+                                          <div class="graph-img">
+                                            <h1 style="color: white">
+                                              {{
+                                                bookings
+                                                  .filter(
+                                                    (booking) =>
+                                                      booking.has_review == true
+                                                  )
+                                                  .filter((booking) =>
+                                                    selectedUser == -1
+                                                      ? true
+                                                      : booking.id_user ==
+                                                        selectedUser
+                                                  ).length
+                                              }}
+                                            </h1>
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div class="col patient-graph-box">
+                                        <a
+                                          class="graph-box pink-graph"
+                                          data-bs-toggle="modal"
+                                          data-bs-target="#graph3"
+                                        >
+                                          <div>
+                                            <h4>DELETED</h4>
+                                          </div>
+                                          <div class="graph-img">
+                                            <h1 style="color: white">
+                                              {{
+                                                bookings
+                                                  .filter(
+                                                    (booking) =>
+                                                      booking.deleted == true
+                                                  )
+                                                  .filter((booking) =>
+                                                    selectedUser == -1
+                                                      ? true
+                                                      : booking.id_user ==
+                                                        selectedUser
+                                                  ).length
+                                              }}
+                                            </h1>
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div class="col patient-graph-box">
+                                        <a
+                                          href="javascript:void(0);"
+                                          class="graph-box sky-blue-graph"
+                                          data-bs-toggle="modal"
+                                          data-bs-target="#graph4"
+                                        >
+                                          <div>
+                                            <h4>ALL</h4>
+                                          </div>
+                                          <div class="graph-img">
+                                            <h1 style="color: white">
+                                              {{
+                                                bookings.filter((booking) =>
+                                                  selectedUser == -1
+                                                    ? true
+                                                    : booking.id_user ==
+                                                      selectedUser
+                                                ).length
+                                              }}
+                                            </h1>
+                                          </div>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="card-body pt-0">
+                                <div class="card card-table mb-0">
+                                  <div class="card-body">
+                                    <div class="table-responsive">
+                                      <table
+                                        class="table table-hover table-center mb-0"
+                                      >
+                                        <thead>
+                                          <tr>
+                                            <th>User</th>
+                                            <th>Date</th>
+                                            <th>Time Slot</th>
+                                            <th>Teacher</th>
+                                            <th>Course</th>
+                                            <th>Status</th>
+                                            <th></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr
+                                            :style="{
+                                              opacity:
+                                                booking.has_review ||
+                                                booking.deleted
+                                                  ? 0.5
+                                                  : 1,
+                                              backgroundColor:
+                                                booking.has_review
+                                                  ? '#f2f2f2'
+                                                  : booking.deleted
+                                                  ? '#ffebe6'
+                                                  : booking.confirmed
+                                                  ? '#ebf9f2'
+                                                  : 'white',
+                                            }"
+                                            v-for="(
+                                              booking, i
+                                            ) in filteredBookings"
+                                            :key="booking.id"
+                                          >
+                                            <td>
+                                              <h2 class="table-avatar">
+                                                <div
+                                                  class="avatar avatar-sm me-2"
+                                                >
+                                                  <img
+                                                    class="avatar-img rounded-circle"
+                                                    src="@/assets/img/teachers/nofotouser.jpeg"
+                                                    alt="User Image"
+                                                  />
+                                                </div>
+                                                <div>
+                                                  {{
+                                                    booking.user_name_surname
+                                                  }}
+                                                  <span
+                                                    >#{{
+                                                      booking.id_user
+                                                    }}</span
+                                                  >
+                                                </div>
+                                              </h2>
+                                            </td>
+                                            <td>{{ booking.date }}</td>
+                                            <td>
+                                              {{ booking.start_time }} -
+                                              {{ booking.end_time }}
+                                            </td>
+                                            <td>
+                                              {{ booking.teacher_name_surname }}
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn btn-sm me-1"
+                                                :style="{
+                                                  backgroundColor:
+                                                    '#' + booking.course_color,
+                                                }"
+                                              >
+                                                {{ booking.course_title }}
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <div
+                                                class="rating mapgridrating"
+                                                v-if="booking.has_review"
+                                              >
+                                                <i
+                                                  class="fas fa-star filled"
+                                                ></i>
+                                                Reviewed
+                                              </div>
+                                              <div v-else-if="booking.deleted">
+                                                <i
+                                                  class="fas fa-trash"
+                                                  style="color: red"
+                                                ></i>
+                                                Deleted
+                                              </div>
+                                              <div
+                                                v-else-if="!booking.confirmed"
+                                              >
+                                                <i class="fa fa-clock"></i>
+                                                Pending
+                                              </div>
+                                              <div
+                                                v-else-if="booking.confirmed"
+                                              >
+                                                <i
+                                                  class="fas fa-star"
+                                                  style="color: grey"
+                                                ></i>
+                                                Missing review
+                                              </div>
+                                            </td>
+                                            <td class="text-end">
+                                              <div class="table-action">
+                                                <a
+                                                  v-if="
+                                                    !booking.confirmed &&
+                                                    !booking.deleted
+                                                  "
+                                                  class="btn btn-sm bg-danger-light me-1"
+                                                  @click.prevent="
+                                                    deleteBooking(booking.id, i)
+                                                  "
+                                                >
+                                                  <i class="fas fa-trash"></i>
+                                                  Delete
+                                                </a>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <!-- Tab Content -->
               </div>
@@ -447,6 +816,7 @@
 </template>
 <script>
 import axios from "axios";
+import DatePicker from "vue3-datepicker";
 import Swal from "sweetalert2";
 import { mapState } from "pinia";
 import useUserStore from "@/stores/user";
@@ -454,6 +824,7 @@ import useUserStore from "@/stores/user";
 export default {
   components: {
     Swal,
+    DatePicker,
   },
   mounted() {
     /*$("#modal_updateTeachedCourses").on("hidden.bs.modal", function () {
@@ -502,6 +873,53 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+
+    await axios
+      .get(
+        "http://localhost:8080/Prenotazioni0_war_exploded/ServletBooking?admin=true",
+        {
+          headers: {
+            Authorization: this.userJwtToken,
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((response) => {
+        if (response.status != 401) {
+          if (response.status == 200) {
+            this.bookings = response.data;
+          } else {
+            console.log(response.status);
+          }
+        } else {
+          // Sbatti fuori
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    await axios
+      .get("http://localhost:8080/Prenotazioni0_war_exploded/servlet-auth", {
+        headers: {
+          Authorization: this.userJwtToken,
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        if (response.status != 401) {
+          if (response.status == 200) {
+            this.users = response.data;
+          } else {
+            console.log(response.status);
+          }
+        } else {
+          // Sbatti fuori
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
   data() {
     return {
@@ -517,6 +935,12 @@ export default {
       courses: [],
       teachers: [],
       bookings: [],
+
+      users: [],
+      showDeleted: false,
+      showArchivied: false,
+      lectureDate: null,
+      selectedUser: -1,
 
       mainSelectCourses: [],
       modalTeacher: null,
@@ -789,9 +1213,86 @@ export default {
           });
       }
     },
+    deleteBooking(id, index) {
+      Swal.fire({
+        title: "Do you want delete the booking?",
+        text: "You won't be able to revert this!",
+        icon: "danger",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "DELETE",
+        cancelButtonText: "NO",
+        reverseButtons: true,
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await axios
+            .delete(
+              "http://localhost:8080/Prenotazioni0_war_exploded/ServletBooking?bookingid=" +
+                id,
+              {
+                headers: {
+                  Authorization: this.userJwtToken,
+                  "Content-Type": "application/json",
+                },
+              }
+            )
+            .then((response) => {
+              if (response.status == 200) {
+                var foundIndex = this.bookings.findIndex((x) => x.id == id);
+                this.bookings[foundIndex].deleted = true;
+                Swal.fire(
+                  "Deleted!",
+                  "Your booking has been deleted.",
+                  "success"
+                );
+              } else {
+                Swal.fire(
+                  "Attention!",
+                  "Error during deleting booking",
+                  "error"
+                );
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        }
+      });
+    },
+    formatDate(date) {
+      var currentDate = date;
+      var month = currentDate.getMonth() + 1;
+      if (month < 10) month = "0" + month;
+      var dateOfMonth = currentDate.getDate();
+      if (dateOfMonth < 10) dateOfMonth = "0" + dateOfMonth;
+      var year = currentDate.getFullYear();
+      var formattedDate = dateOfMonth + "/" + month + "/" + year;
+      return formattedDate;
+    },
   },
   computed: {
     ...mapState(useUserStore, ["userLoggedIn", "userJwtToken"]),
+    filteredBookings() {
+      this.bookings.confirmed;
+      return this.bookings
+        .filter((booking) => {
+          return this.showDeleted ? true : booking.deleted == false;
+        })
+        .filter((booking) => {
+          return this.showArchivied ? true : booking.has_review == false;
+        })
+        .filter((booking) => {
+          return this.lectureDate == null
+            ? true
+            : booking.date == this.formatDate(this.lectureDate);
+        })
+        .filter((booking) => {
+          return this.selectedUser == -1
+            ? true
+            : booking.id_user == this.selectedUser;
+        });
+    },
   },
 };
 </script>

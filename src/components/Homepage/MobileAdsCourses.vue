@@ -75,7 +75,7 @@ export default {
         infinite: true,
         variableWidth: true,
         draggable: false,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1500,
       });
     }
   },

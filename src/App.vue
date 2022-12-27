@@ -51,7 +51,6 @@ export default {
 
 [TO DO]
 - Autenticazione (pulizia, errori e expired token)
-- Finire pagina teachers (ordina e fix)
 - perche calendario mi da errore: "Uncaught (in promise) TypeError: Cannot read properties of null"
 
 [ADDITIONAL FUNCTIONS]
@@ -62,6 +61,7 @@ export default {
 - slider max hourly rate
 - teacher/id sbagliato non riporta correttamente alla homepage
 - se uno recensisce da telefono e poi non refresha da sito dove ha abilitato ancora review inconsistenze (check nel backend)
+- errore check unckeck admin associa corsi
 
 */
 </script>
