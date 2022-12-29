@@ -120,40 +120,25 @@
                 <strong> Today booked lectures..</strong>
               </h2>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" v-if="loaded">
               <div
                 v-for="(n, i) in 4"
                 class="col-3 d-flex aos"
                 data-aos="fade-up"
               >
                 <div
-                  v-if="!checkDailySlot(i + 15)"
+                  v-if="checkDailySlot(i + 15) != -1"
                   class="appointment-grid w-100"
-                  style="outline: 2px dashed grey; outline-offset: 0px"
                 >
-                  <div class="appointment-info">
-                    <div class="appointment-link">
-                      {{ i + 15 }} - {{ i + 15 + 1 }}
-                    </div>
-                    <p>
-                      You haven't booked a lecture for this time slot yet! Book
-                      now and start learning!
-                    </p>
-                    <router-link
-                      :to="{ name: 'teachers' }"
-                      class="btn appointment-read-btn"
-                      >Book Now <i class="fas fa-arrow-right ms-2"></i
-                    ></router-link>
-                  </div>
-                </div>
-                <div v-else class="appointment-grid w-100">
                   <div class="text-center">
                     <div class="row">
                       <div
                         class="speicality-img-upcoming col-6"
                         :style="{
                           backgroundColor:
-                            '#' + upcomingLectures[index].course_color,
+                            '#' +
+                            upcomingLectures[checkDailySlot(i + 15)]
+                              .course_color,
                         }"
                       >
                         <i
@@ -171,7 +156,10 @@
                         style="text-align: center; margin: auto"
                       >
                         <h3>
-                          {{ upcomingLectures[index].course_title }}
+                          {{
+                            upcomingLectures[checkDailySlot(i + 15)]
+                              .course_title
+                          }}
                         </h3>
                       </div>
                     </div>
@@ -179,21 +167,46 @@
                   <br />
                   <div class="appointment-info">
                     <div to="/search" class="appointment-link">
-                      {{ upcomingLectures[index].start_time }}
+                      {{ upcomingLectures[checkDailySlot(i + 15)].start_time }}
                       -
-                      {{ upcomingLectures[index].end_time }}
+                      {{ upcomingLectures[checkDailySlot(i + 15)].end_time }}
                     </div>
                     <p>
                       Lecture with teacher
-                      {{ upcomingLectures[index].teacher_name_surname }}
+                      {{
+                        upcomingLectures[checkDailySlot(i + 15)]
+                          .teacher_name_surname
+                      }}
                     </p>
                     <router-link
                       :to="{
                         name: 'mybookings',
-                        query: { date: upcomingLectures[index].date },
+                        query: {
+                          date: upcomingLectures[checkDailySlot(i + 15)].date,
+                        },
                       }"
                       class="btn appointment-read-btn"
                       >Manage <i class="fas fa-arrow-right ms-2"></i
+                    ></router-link>
+                  </div>
+                </div>
+                <div
+                  v-else
+                  class="appointment-grid w-100"
+                  style="outline: 2px dashed grey; outline-offset: 0px"
+                >
+                  <div class="appointment-info">
+                    <div class="appointment-link">
+                      {{ i + 15 }} - {{ i + 15 + 1 }}
+                    </div>
+                    <p>
+                      You haven't booked a lecture for this time slot yet! Book
+                      now and start learning!
+                    </p>
+                    <router-link
+                      :to="{ name: 'teachers' }"
+                      class="btn appointment-read-btn"
+                      >Book Now <i class="fas fa-arrow-right ms-2"></i
                     ></router-link>
                   </div>
                 </div>
@@ -233,6 +246,7 @@ export default {
         if (response.status != 401) {
           if (response.status == 200) {
             this.upcomingLectures = response.data;
+            this.loaded = true;
           } else {
             console.log(response.status);
           }
@@ -251,18 +265,17 @@ export default {
   },
   methods: {
     checkDailySlot(startTime) {
-      if (this.upcomingLectures.find((e) => e.start_time === startTime)) {
-        this.index++;
-        return true;
-      } else {
-        return false;
-      }
+      return this.upcomingLectures.findIndex(
+        (element) => element.start_time == startTime
+      );
     },
   },
+
   data() {
     return {
+      loaded: false,
       index: -1,
-      upcomingLectures: [],
+      upcomingLectures: null,
       searchBar: "",
     };
   },
