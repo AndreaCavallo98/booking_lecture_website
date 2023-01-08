@@ -46,10 +46,28 @@
                     <div class="calendar-events">
                       <i class="fas fa-square" style="color: #80ffaa"></i>
                       Available
+                      <small>(You can book this time slot)</small>
                     </div>
                     <div class="calendar-events">
                       <i class="fas fa-square" style="color: #ff6666"></i> Not
                       available
+                      <small
+                        >(the teacher is already busy with another student in
+                        this time slot)</small
+                      >
+                    </div>
+                    <div class="calendar-events">
+                      <i class="fas fa-square" style="color: #b3d9ff"></i>
+                      Already booked
+                      <small
+                        >(you have already booked a lecture in this time
+                        slot)</small
+                      >
+                    </div>
+                    <div class="calendar-events">
+                      <i class="fas fa-square" style="color: #bfbfbf"></i> Not
+                      Bookable
+                      <small>(impossible to book for past time slots)</small>
                     </div>
                   </div>
                 </div>
@@ -221,12 +239,25 @@ export default {
                 .replaceAll("/", "-");
               console.log(newdate + "T" + eventEl.from.toString() + ":00:00");
               return {
-                //title: "",
+                title:
+                  eventEl.status == "booked"
+                    ? "BOOKED"
+                    : eventEl.status == "passed"
+                    ? "NOT BOOKABLE"
+                    : "",
                 start: newdate + "T" + eventEl.from.toString() + ":00:00",
                 editable: false,
-                backgroundColor: eventEl.avaliable ? "#80ffaa" : "#ff6666",
+                backgroundColor:
+                  eventEl.status == "passed"
+                    ? "#bfbfbf"
+                    : eventEl.status == "free"
+                    ? "#80ffaa"
+                    : eventEl.status == "booked"
+                    ? "#b3d9ff"
+                    : "#ff6666",
+
                 textColor: "black",
-                available: eventEl.avaliable,
+                status: eventEl.status,
                 allDay: false,
                 bookingDate: eventEl.date,
                 bookingStartTime: eventEl.from,
@@ -326,11 +357,18 @@ export default {
         },
         eventClick: function (info) {
           info.jsEvent.preventDefault(); // don't let the browser navigate
-          if (info.event.extendedProps.available) {
+          if (info.event.extendedProps.status == "free") {
             $("#payment_request_modal").modal("show");
             self.bookingDate = info.event.extendedProps.bookingDate;
             self.bookingStartTime = info.event.extendedProps.bookingStartTime;
             self.bookingEndTime = info.event.extendedProps.bookingEndTime;
+          } else if (info.event.extendedProps.status == "booked") {
+            self.$router.replace({
+              name: "mybookings",
+              query: {
+                date: info.event.extendedProps.bookingDate,
+              },
+            });
           }
         },
         slotLabelFormat: "HH:mm",
